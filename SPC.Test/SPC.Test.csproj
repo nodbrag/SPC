@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SPC.Core\SPC.Core.csproj" />
+    <ProjectReference Include="..\SPC.IService\SPC.IService.csproj" />
+    <ProjectReference Include="..\SPC.Models\SPC.Models.csproj" />
+    <ProjectReference Include="..\SPC.Service\SPC.Service.csproj" />
+  </ItemGroup>
+
+</Project>

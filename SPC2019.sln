@@ -1,0 +1,120 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB Design", "DB Design", "{338D312C-6D8E-4E7D-81F1-CEB5C7199958}"
+	ProjectSection(SolutionItems) = preProject
+		Document\DB Design\Main.pdm = Document\DB Design\Main.pdm
+		Document\DB Design\SPC.sws = Document\DB Design\SPC.sws
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{9CE690AB-6B66-4B5D-B6C2-1C68785710FA}"
+	ProjectSection(SolutionItems) = preProject
+		Document\Note.txt = Document\Note.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPC.WebApp", "SPC.WebApp\SPC.WebApp.csproj", "{28B415FB-193D-40D3-9350-FA6E61B42E02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPC.Api", "SPC.Api\SPC.Api.csproj", "{C2825D7C-D0B7-4D23-BC53-5108057D0C0B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPC.CodeGen", "SPC.CodeGen\SPC.CodeGen.csproj", "{5D98A53E-12AA-4158-AD3C-6B94F7DBB4F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPC.Core", "SPC.Core\SPC.Core.csproj", "{32834EDA-24F7-44F2-880D-BC4B916B8E4E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPC.IService", "SPC.IService\SPC.IService.csproj", "{B4101DC9-D65E-4E78-8820-44DD19F1C299}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPC.Service", "SPC.Service\SPC.Service.csproj", "{86D2E750-5102-4821-8AB0-570C517A85D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPC.Models", "SPC.Models\SPC.Models.csproj", "{11AE74BD-1E4F-43FE-8EB5-513D3D300659}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mysql", "mysql", "{677B40E5-E38A-4292-9019-5AC5BFBD88B1}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\nodbr\Desktop\json格式.txt = C:\Users\nodbr\Desktop\json格式.txt
+		C:\Users\nodbr\Desktop\mock.txt = C:\Users\nodbr\Desktop\mock.txt
+		C:\Users\nodbr\Desktop\mysql.sql = C:\Users\nodbr\Desktop\mysql.sql
+		C:\Users\nodbr\Desktop\更新命令.txt = C:\Users\nodbr\Desktop\更新命令.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPC.Test", "SPC.Test\SPC.Test.csproj", "{2E99EEAE-6019-4F71-AFF3-AABB8656DC13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28B415FB-193D-40D3-9350-FA6E61B42E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B415FB-193D-40D3-9350-FA6E61B42E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28B415FB-193D-40D3-9350-FA6E61B42E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28B415FB-193D-40D3-9350-FA6E61B42E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2825D7C-D0B7-4D23-BC53-5108057D0C0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2825D7C-D0B7-4D23-BC53-5108057D0C0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2825D7C-D0B7-4D23-BC53-5108057D0C0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2825D7C-D0B7-4D23-BC53-5108057D0C0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D98A53E-12AA-4158-AD3C-6B94F7DBB4F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D98A53E-12AA-4158-AD3C-6B94F7DBB4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D98A53E-12AA-4158-AD3C-6B94F7DBB4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D98A53E-12AA-4158-AD3C-6B94F7DBB4F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32834EDA-24F7-44F2-880D-BC4B916B8E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32834EDA-24F7-44F2-880D-BC4B916B8E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32834EDA-24F7-44F2-880D-BC4B916B8E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32834EDA-24F7-44F2-880D-BC4B916B8E4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4101DC9-D65E-4E78-8820-44DD19F1C299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4101DC9-D65E-4E78-8820-44DD19F1C299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4101DC9-D65E-4E78-8820-44DD19F1C299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4101DC9-D65E-4E78-8820-44DD19F1C299}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86D2E750-5102-4821-8AB0-570C517A85D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86D2E750-5102-4821-8AB0-570C517A85D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86D2E750-5102-4821-8AB0-570C517A85D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86D2E750-5102-4821-8AB0-570C517A85D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11AE74BD-1E4F-43FE-8EB5-513D3D300659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11AE74BD-1E4F-43FE-8EB5-513D3D300659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11AE74BD-1E4F-43FE-8EB5-513D3D300659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11AE74BD-1E4F-43FE-8EB5-513D3D300659}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E99EEAE-6019-4F71-AFF3-AABB8656DC13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E99EEAE-6019-4F71-AFF3-AABB8656DC13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E99EEAE-6019-4F71-AFF3-AABB8656DC13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E99EEAE-6019-4F71-AFF3-AABB8656DC13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{338D312C-6D8E-4E7D-81F1-CEB5C7199958} = {9CE690AB-6B66-4B5D-B6C2-1C68785710FA}
+		{677B40E5-E38A-4292-9019-5AC5BFBD88B1} = {9CE690AB-6B66-4B5D-B6C2-1C68785710FA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D153BDF2-6B32-4C31-B607-4CF5A04B1347}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://47.100.234.196:8080/tfs/microintelligence
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SPC.Api\\SPC.Api.csproj
+		SccProjectName1 = SPC.Api
+		SccLocalPath1 = SPC.Api
+		SccProjectUniqueName2 = SPC.CodeGen\\SPC.CodeGen.csproj
+		SccProjectName2 = SPC.CodeGen
+		SccLocalPath2 = SPC.CodeGen
+		SccProjectUniqueName3 = SPC.Core\\SPC.Core.csproj
+		SccProjectName3 = SPC.Core
+		SccLocalPath3 = SPC.Core
+		SccProjectUniqueName4 = SPC.IService\\SPC.IService.csproj
+		SccProjectName4 = SPC.IService
+		SccLocalPath4 = SPC.IService
+		SccProjectUniqueName5 = SPC.Models\\SPC.Models.csproj
+		SccProjectName5 = SPC.Models
+		SccLocalPath5 = SPC.Models
+		SccProjectUniqueName6 = SPC.Service\\SPC.Service.csproj
+		SccProjectName6 = SPC.Service
+		SccLocalPath6 = SPC.Service
+		SccProjectUniqueName7 = SPC.WebApp\\SPC.WebApp.csproj
+		SccProjectName7 = SPC.WebApp
+		SccLocalPath7 = SPC.WebApp
+		SccProjectUniqueName8 = SPC.Test\\SPC.Test.csproj
+		SccProjectName8 = SPC.Test
+		SccLocalPath8 = SPC.Test
+	EndGlobalSection
+EndGlobal

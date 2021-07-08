@@ -1,0 +1,55 @@
+/**
+*┌──────────────────────────────────────────────────────────────┐
+*│　描    述：                                                    
+*│　作    者：SPC                                              
+*│　版    本：1.0   模板代码自动生成                                              
+*│　创建时间：2019-07-11 10:12:57                            
+*└──────────────────────────────────────────────────────────────┘
+*┌──────────────────────────────────────────────────────────────┐
+*│　命名空间: SPC.Models.DtoModel                                  
+*│　类    名：WorkProcessEquipment                                     
+*└──────────────────────────────────────────────────────────────┘
+*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace SPC.Models.DtoModel
+{
+    public class WorkProcessEquipmentDtos
+    {
+        public class WorkProcessEquipmentDto
+        {
+            		/// <summary>
+		///  
+		/// </summary>
+		[Key]
+		public Int32 WorkProcessEquipmentID {get;set;}
+
+		/// <summary>
+		///  
+		/// </summary>
+		[Required]
+		[MaxLength(10)]
+		public Int32 WorkProcessID {get;set;}
+
+		/// <summary>
+		///  
+		/// </summary>
+		[Required]
+		[MaxLength(10)]
+		public Int32 EquipmentID {get;set;}
+
+
+        }
+        public class WorkProcessEquipmentFilterDto
+        {
+           
+        }
+    }
+   
+}

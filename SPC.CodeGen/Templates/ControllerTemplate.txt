@@ -1,0 +1,159 @@
+﻿/**
+*┌──────────────────────────────────────────────────────────────┐
+*│　描    述：{Comment}                                                    
+*│　作    者：{Author}                                            
+*│　版    本：1.0    模板代码自动生成                                                
+*│　创建时间：{GeneratorTime}                             
+*└──────────────────────────────────────────────────────────────┘
+*┌──────────────────────────────────────────────────────────────┐
+*│　命名空间： {ControllerNamespace}                                  
+*│　类    名： {ModelName}Controller                                    
+*└──────────────────────────────────────────────────────────────┘
+*/
+using System;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using SPC.Core.Extensions;
+using SPC.IService;
+using SPC.Models.DtoModel;
+using SPC.Core.Dtos;
+using Microsoft.Extensions.Logging;
+using SPC.Core.Filter;
+
+namespace SPC.Api.Controllers
+{
+    /// <summary>
+    /// 用户管理接口
+    /// </summary>
+    [ApiController]
+    [Route("api/[controller]/[action]")]
+    [ApiExplorerSettings(GroupName = "BasicInformation")]
+    public class {ModelName}Controller : ControllerBase
+    {
+        private readonly  I{ModelName}Service _{ModelName}Service;
+        private readonly ILogger _logger;
+        public {ModelName}Controller(I{ModelName}Service {ModelName}Service, ILogger<ExceptionFilter> logger) {
+            _logger = logger;
+            _{ModelName}Service = {ModelName}Service;
+        }
+        /// <summary>
+        ///     创建用户
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public IExecResult Create{ModelName}([FromBody]{ModelName}Dtos.{ModelName}Dto model)
+        {
+            try
+            {
+                _{ModelName}Service.Create{ModelName}(model);
+                return new OkOpResult();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.GetInnerException());
+                return new BadOpResult(OpResultStatus.InsertError);
+            }
+        }
+        /// <summary>
+        ///     修改用户
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public IExecResult Update{ModelName}([FromBody]{ModelName}Dtos.{ModelName}Dto model)
+        {
+            try
+            {
+                _{ModelName}Service.Update{ModelName}(model);
+                return new OkOpResult();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.GetInnerException());
+                return new BadOpResult(OpResultStatus.UpdateError);
+            }
+        }
+        /// <summary>
+        /// 删除用户
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public IExecResult Delete{ModelName}(int id)
+        {
+            try
+            {
+                _{ModelName}Service.Delete{ModelName}(id);
+                return new OkOpResult();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.GetInnerException());
+                return new BadOpResult(OpResultStatus.DeleteError);
+            }
+        }
+        /// <summary>
+        /// 通过编号获取用户信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public IExecResult<{ModelName}Dtos.{ModelName}Dto> Get{ModelName}ByID(int id)
+        {
+            try
+            {
+                {ModelName}Dtos.{ModelName}Dto {ModelName}Dto= _{ModelName}Service.Get{ModelName}ByID(id);
+                return new OkOpResult<{ModelName}Dtos.{ModelName}Dto>({ModelName}Dto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.GetInnerException());
+                return new BadOpResult<{ModelName}Dtos.{ModelName}Dto>(OpResultStatus.Error);
+            }
+        }
+        /// <summary>
+        /// 获取所有用户列表信息
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IExecPageResult<{ModelName}Dtos.{ModelName}Dto> Get{ModelName}List()
+        {
+            try
+            {
+                List<{ModelName}Dtos.{ModelName}Dto> {ModelName}Dtos = _{ModelName}Service.Get{ModelName}List();
+                return new OkOpPageResult<{ModelName}Dtos.{ModelName}Dto>({ModelName}Dtos);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.GetInnerException());
+                return new BadOpPageResult<{ModelName}Dtos.{ModelName}Dto>(OpResultStatus.Error);
+            }
+        }
+        
+        /// <summary>
+        /// 通过过滤条件获取用户分页数据
+        /// </summary>
+        /// <param name="fiterCondition"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public IExecPageResult<{ModelName}Dtos.{ModelName}Dto> Get{ModelName}ListForPagination([FromBody]FiterConditionBase<{ModelName}Dtos.{ModelName}FilterDto> fiterCondition)
+        {
+            try
+            {
+                if (fiterCondition == null)
+                    return Get{ModelName}List();
+                Tuple<List<{ModelName}Dtos.{ModelName}Dto>, int> list = _{ModelName}Service.Get{ModelName}ListForPagination(fiterCondition);
+                return new OkOpPageResult<{ModelName}Dtos.{ModelName}Dto>(list.Item1, list.Item2);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.GetInnerException());
+                return new BadOpPageResult<{ModelName}Dtos.{ModelName}Dto>(OpResultStatus.Error);
+            }
+           
+        }
+
+    }
+}

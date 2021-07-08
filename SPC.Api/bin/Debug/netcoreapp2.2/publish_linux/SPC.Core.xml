@@ -1,0 +1,3101 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SPC.Core</name>
+    </assembly>
+    <members>
+        <member name="M:SPC.Core.Attribute.CreateByAttribute.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">开发人员编码</param>
+        </member>
+        <member name="M:SPC.Core.Attribute.CreateByAttribute.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">开发人员编码</param>
+            <param name="time">开发时间</param>
+        </member>
+        <member name="P:SPC.Core.Attribute.CreateByAttribute.Name">
+            <summary>
+            开发人员编码
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Attribute.CreateByAttribute.Time">
+            <summary>
+            开发时间
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Attribute.FromEntityAttribute">
+            <summary>
+            用于标注字段 来自哪个表的的哪一列(仅限于有关联的表中)
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Attribute.FromEntityAttribute.EntityNames">
+            <summary>
+            类名(表名)
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Attribute.FromEntityAttribute.EntityColuum">
+            <summary>
+            字段(列名)
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Attribute.FromEntityAttribute.#ctor(System.String,System.String[])">
+            <summary>
+            列名 + 该列的表名 + 该列的表的上一级表名
+            </summary>
+            <param name="entityColuum"></param>
+            <param name="entityNames"></param>
+        </member>
+        <member name="M:SPC.Core.Attribute.RemarkAttribute.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="Remark">内容</param>
+        </member>
+        <member name="P:SPC.Core.Attribute.RemarkAttribute.Remark">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Auth.PrincipalUser.UserId">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Auth.PrincipalUser.Code">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Auth.PrincipalUser.ContactNumber">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Auth.PrincipalUser.Name">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Auth.PrincipalUser.OrganizationId">
+            <summary>
+            组织机构Id
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Auth.PrincipalUser.OrganizationName">
+            <summary>
+            组织机构名称
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Auth.PrincipalUser.LoginId">
+            <summary>
+            登录后的Id值,退出时更新退出时间
+            </summary>
+        </member>
+        <member name="T:SPC.Core.ChartAlgorithm.AlgorithmHelper">
+            <summary>
+            公用基本算法
+            </summary>
+        </member>
+        <member name="M:SPC.Core.ChartAlgorithm.AlgorithmHelper.getMedian(System.Collections.Generic.List{System.Double})">
+            <summary>
+            取平均数 中位数 偶数取中间两个值之和/2 奇数 去中间数值
+            </summary>
+            <param name="meanVlues">平均值列表</param>
+        </member>
+        <member name="M:SPC.Core.ChartAlgorithm.AlgorithmHelper.getSigma(System.Collections.Generic.List{System.Double},System.Double)">
+            <summary>
+            获取标准方差
+            </summary>
+            <param name="datas">数据</param>
+            <param name="P">均值</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.ChartAlgorithm.AlgorithmHelper.getMinMeaUnit(System.Int32)">
+            <summary>
+            获取最小测定单位
+            </summary>
+            <param name="floatNum">样本数的小数位数</param>
+            <returns></returns>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.CPKDto.USL">
+            <summary>
+            规格上限
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.CPKDto.LSL">
+            <summary>
+            规格下限
+            </summary>
+        </member>
+        <!-- 对于成员“P:SPC.Core.ChartAlgorithm.CPKDto.T”忽略有格式错误的 XML 注释 -->
+        <member name="P:SPC.Core.ChartAlgorithm.CPKDto.U">
+            <summary>
+            规格中心值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.CPKDto.P">
+            <summary>
+            平均值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.CPKDto.Sigma">
+            <summary>
+            标准方差
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.CPKDto.CA">
+            <summary>
+            制程准确度
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.CPKDto.CP">
+             <summary>
+            制程精密度
+             </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.CPKDto.CPK">
+            <summary>
+            制程能力指数
+            </summary>
+        </member>
+        <member name="T:SPC.Core.ChartAlgorithm.Histogram.Histogram">
+            <summary>
+            直方图
+            </summary>
+        </member>
+        <member name="M:SPC.Core.ChartAlgorithm.Histogram.Histogram.GetHistogram(System.Collections.Generic.List{System.Double},System.Double,System.Double,System.Int32,System.Int32)">
+            <summary>
+            获取直方图
+            </summary>
+            <param name="samples">样本数据</param>
+            <param name="USL">最大</param>
+            <param name="LSL">最小</param>
+            <param name="IntervalNum">区间数量</param>
+            <param name="floatNum">样本数的小数位数</param>
+            <returns></returns>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.Histogram.HistogramDto.XValue">
+            <summary>
+            X 数值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.Histogram.HistogramDto.YValue">
+            <summary>
+            Y 数值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.Histogram.HistogramDto.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.Histogram.HistogramDto.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.Histogram.HistogramDto.cpk">
+            <summary>
+            CPK
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.Histogram.HistogramParamsDto.LValue">
+            <summary>
+            下边界值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.Histogram.HistogramParamsDto.CValue">
+            <summary>
+            区域中间值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.Histogram.HistogramParamsDto.UValue">
+            <summary>
+            上边界值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.Histogram.HistogramParamsDto.Number">
+            <summary>
+            符合区域内的数量值
+            </summary>
+        </member>
+        <member name="T:SPC.Core.ChartAlgorithm.PChart.PChart">
+            <summary>
+            不合格率控制图
+            </summary>
+        </member>
+        <member name="M:SPC.Core.ChartAlgorithm.PChart.PChart.getPChart(System.Collections.Generic.List{SPC.Core.ChartAlgorithm.PChart.PData})">
+            <summary>
+            根据样本数，获取不合格良率图
+            </summary>
+            <param name="samples"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.PChart.PData.totalCount">
+            <summary>
+            总量
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.PChart.PData.errorCount">
+             <summary>
+            不合格量
+             </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.PChart.PData.xAxisValue">
+            <summary>
+            批次号或时间
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.PChart.PDto.UCL">
+            <summary>
+            不良上线控制数据
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.PChart.PDto.LCL">
+            <summary>
+            不良下线控制数据
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.PChart.PDto.badCL">
+            <summary>
+            不良率中止控制数据
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.PChart.PDto.okCL">
+            <summary>
+            良品均值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.PChart.PDto.badRate">
+            <summary>
+            不良率
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.PChart.PDto.okRate">
+            <summary>
+            合格率
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.PChart.PDto.xAxisValue">
+            <summary>
+            X 值
+            </summary>
+        </member>
+        <member name="M:SPC.Core.ChartAlgorithm.PlatoChart.PlatoChart.getPlatoChart(System.Collections.Generic.List{SPC.Core.ChartAlgorithm.PlatoChart.PlatoData})">
+            <summary>
+            获取泊拉图数据
+            </summary>
+            <param name="samples"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.PlatoChart.PlatoDto.PValue">
+            <summary>
+            p值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.PlatoChart.PlatoDto.xAxisValue">
+            <summary>
+            x 值
+            </summary>
+        </member>
+        <member name="T:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlChart">
+            <summary>
+            质量控制图
+            </summary>
+        </member>
+        <member name="F:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlChart.A2Dic">
+            <summary>
+            质量控制系数 A2  暂时支持到15子组
+            </summary>
+        </member>
+        <member name="F:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlChart.D3Dic">
+            <summary>
+            质量控制系数 D3  暂时支持到15子组
+            </summary>
+        </member>
+        <member name="F:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlChart.D4Dic">
+            <summary>
+            质量控制系数 D4  暂时支持到15子组
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlDto.MeanCL">
+            <summary>
+            均值图中心线值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlDto.MeanUCL">
+            <summary>
+            均值图上限线值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlDto.MeanLCL">
+             <summary>
+            均值图下限值
+             </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlDto.RangeCL">
+            <summary>
+            极差图中心线值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlDto.RangeUCL">
+            <summary>
+            极差图上限值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlDto.RangeLCL">
+            <summary>
+            极差图下限值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlDto.SampleCL">
+            <summary>
+            样本图中心线值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlDto.SampleUCL">
+            <summary>
+            样本图上限值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlDto.SampleLCL">
+            <summary>
+            样本下限值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlDto.MeanValues">
+            <summary>
+            均值列表值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlDto.RangeValues">
+            <summary>
+            极差列表值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlDto.SampleValues">
+            <summary>
+            样本列表值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlDto.histogram">
+            <summary>
+            CPK
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlParmsDto.MeanValue">
+            <summary>
+            均值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlParmsDto.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlParmsDto.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlParmsDto.RangeValue">
+            <summary>
+            极差值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.QualityControlChart.QualityControlParmsDto.StandardDeviationValue">
+            <summary>
+            标准差值
+            </summary>
+        </member>
+        <member name="T:SPC.Core.ChartAlgorithm.RunningChart.RunningChart">
+            <summary>
+            运行图
+            </summary>
+        </member>
+        <member name="M:SPC.Core.ChartAlgorithm.RunningChart.RunningChart.getRunningChart(System.Collections.Generic.List{System.Double}[])">
+            <summary>
+            获取运行图
+            </summary>
+            <param name="datas"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.RunningChart.RunningChartDto.runningDatas">
+            <summary>
+            运行图数据值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.ChartAlgorithm.RunningChart.RunningChartDto.RunningCL">
+            <summary>
+            运行图中线值
+            </summary>
+        </member>
+        <member name="M:SPC.Core.DbHelper.ConnectionFactory.CreateConnection(System.String,System.String)">
+            <summary>
+            获取数据库连接
+            </summary>
+            <param name="dbType">数据库类型</param>
+            <param name="conStr">数据库连接字符串</param>
+            <returns>数据库连接</returns>
+        </member>
+        <member name="M:SPC.Core.DbHelper.ConnectionFactory.CreateConnection(SPC.Core.DbHelper.DatabaseType,System.String)">
+            <summary>
+            获取数据库连接
+            </summary>
+            <param name="dbType">数据库类型</param>
+            <param name="connectionString">数据库连接字符串</param>
+            <returns>数据库连接</returns>
+        </member>
+        <member name="M:SPC.Core.DbHelper.ConnectionFactory.GetDataBaseType(System.String)">
+            <summary>
+            转换数据库类型
+            </summary>
+            <param name="dbType">数据库类型字符串</param>
+            <returns>数据库类型</returns>
+        </member>
+        <member name="T:SPC.Core.DbHelper.DatabaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Dtos.ExcePageResult`1">
+            <summary>
+            执行结果
+            </summary>
+            <typeparam name="TResultStatus">执行结果状态</typeparam>
+            <typeparam name="TResultData">执行结果数据的类型</typeparam>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExcePageResult`1.Result">
+            <summary>
+            结果附带数据
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExcePageResult`1.Message">
+            <summary>
+            结果信息
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExcePageResult`1.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExcePageResult`1.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExcePageResult`1.#ctor(SPC.Core.Dtos.OpResultStatus)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExcePageResult`1.#ctor(SPC.Core.Dtos.OpResultStatus,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+            <param name="_msg"></param>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExcePageResult`1.#ctor(SPC.Core.Dtos.OpResultStatus,System.String,SPC.Core.Dtos.PageResult{`0})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+            <param name="_msg"></param>
+            <param name="_data"></param>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExcePageResult.Result">
+            <summary>
+            结果附带数据
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExcePageResult.Message">
+            <summary>
+            结果信息
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExcePageResult.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExcePageResult.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExcePageResult.#ctor(SPC.Core.Dtos.OpResultStatus)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExcePageResult.#ctor(SPC.Core.Dtos.OpResultStatus,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+            <param name="_msg"></param>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExcePageResult.#ctor(SPC.Core.Dtos.OpResultStatus,System.String,SPC.Core.Dtos.PageResult{System.Object})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+            <param name="_msg"></param>
+            <param name="_data"></param>
+        </member>
+        <member name="T:SPC.Core.Dtos.ExcePageResult`2">
+            <summary>
+            执行结果
+            </summary>
+            <typeparam name="TResultStatus">执行结果状态</typeparam>
+            <typeparam name="TResultData">执行结果数据的类型</typeparam>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExcePageResult`2.Result">
+            <summary>
+            结果附带数据
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExcePageResult`2.Message">
+            <summary>
+            结果信息
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExcePageResult`2.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExcePageResult`2.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExcePageResult`2.#ctor(`0)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExcePageResult`2.#ctor(`0,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+            <param name="_msg"></param>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExcePageResult`2.#ctor(`0,System.String,SPC.Core.Dtos.PageResult{`1})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+            <param name="_msg"></param>
+            <param name="_data"></param>
+        </member>
+        <member name="T:SPC.Core.Dtos.ExecResult`1">
+            <summary>
+            执行结果
+            </summary>
+            <typeparam name="TResultStatus">执行结果状态</typeparam>
+            <typeparam name="TResultData">执行结果数据的类型</typeparam>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExecResult`1.Result">
+            <summary>
+            结果附带数据
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExecResult`1.Message">
+            <summary>
+            结果信息
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExecResult`1.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExecResult`1.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExecResult`1.#ctor(SPC.Core.Dtos.OpResultStatus)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExecResult`1.#ctor(SPC.Core.Dtos.OpResultStatus,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+            <param name="_msg"></param>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExecResult`1.#ctor(SPC.Core.Dtos.OpResultStatus,System.String,`0)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+            <param name="_msg"></param>
+            <param name="_data"></param>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExecResult.Result">
+            <summary>
+            结果附带数据
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExecResult.Message">
+            <summary>
+            结果信息
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExecResult.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExecResult.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExecResult.#ctor(SPC.Core.Dtos.OpResultStatus)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExecResult.#ctor(SPC.Core.Dtos.OpResultStatus,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+            <param name="_msg"></param>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExecResult.#ctor(SPC.Core.Dtos.OpResultStatus,System.String,System.Object)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+            <param name="_msg"></param>
+            <param name="_data"></param>
+        </member>
+        <member name="T:SPC.Core.Dtos.ExecResult`2">
+            <summary>
+            执行结果
+            </summary>
+            <typeparam name="TResultStatus">执行结果状态</typeparam>
+            <typeparam name="TResultData">执行结果数据的类型</typeparam>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExecResult`2.Result">
+            <summary>
+            结果附带数据
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExecResult`2.Message">
+            <summary>
+            结果信息
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.ExecResult`2.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExecResult`2.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExecResult`2.#ctor(`0)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExecResult`2.#ctor(`0,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+            <param name="_msg"></param>
+        </member>
+        <member name="M:SPC.Core.Dtos.ExecResult`2.#ctor(`0,System.String,`1)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_type"></param>
+            <param name="_msg"></param>
+            <param name="_data"></param>
+        </member>
+        <member name="P:SPC.Core.Dtos.FiterConditionBase`1.MaxResultCount">
+            <summary>
+            分页条件
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.FiterConditionBase`1.SkipCount">
+            <summary>
+            第几页
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.FiterConditionBase`1.Sortings">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.FiterConditionBase`1.Filter">
+            <summary>
+            过滤
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.IExecPageResult`2.Status">
+            <summary>
+            执行状态
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.IExecPageResult`2.Message">
+            <summary>
+            返回消息
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="P:SPC.Core.Dtos.IExecPageResult`2.Result">
+            <summary>
+            执行结果数据
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="P:SPC.Core.Dtos.IExecPageResult`2.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Dtos.IExecPageResult`1">
+            <summary>
+            执行结果
+            </summary>
+            <typeparam name="TResultStatus">执行结果状态</typeparam>
+            <typeparam name="TResultData">执行结果数据</typeparam>
+        </member>
+        <member name="T:SPC.Core.Dtos.IExecResult`2">
+            <summary>
+            执行结果
+            </summary>
+            <typeparam name="TResultStatus">执行结果状态</typeparam>
+            <typeparam name="TResultData">执行结果数据</typeparam>
+        </member>
+        <member name="P:SPC.Core.Dtos.IExecResult`2.Status">
+            <summary>
+            执行状态
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.IExecResult`2.Message">
+            <summary>
+            返回消息
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="P:SPC.Core.Dtos.IExecResult`2.Result">
+            <summary>
+            执行结果数据
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="P:SPC.Core.Dtos.IExecResult`2.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Dtos.IExecResult`1">
+            <summary>
+            执行结果
+            </summary>
+            <typeparam name="TResultStatus">执行结果状态</typeparam>
+            <typeparam name="TResultData">执行结果数据</typeparam>
+        </member>
+        <member name="P:SPC.Core.Dtos.OpPageResult`1.Success">
+            <summary>
+            是否操作成功
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpPageResult`1.#ctor(System.Collections.Generic.IReadOnlyList{`0},System.Int32)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpPageResult`1.#ctor(SPC.Core.Dtos.OpResultStatus)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpPageResult`1.#ctor(SPC.Core.Dtos.OpResultStatus,System.String)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpPageResult`1.#ctor(SPC.Core.Dtos.OpResultStatus,System.String,System.Collections.Generic.IReadOnlyList{`0},System.Int32)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult"/>类型的新实例
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpPageResult`1._message">
+            <summary>
+            返回消息字段
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.OpPageResult`1.Message">
+            <summary>
+            返回消息属性
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.OpPageResult.Success">
+            <summary>
+            是否操作成功
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpPageResult.#ctor(System.Collections.Generic.IReadOnlyList{System.Object},System.Int32)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpPageResult.#ctor(SPC.Core.Dtos.OpResultStatus)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpPageResult.#ctor(SPC.Core.Dtos.OpResultStatus,System.String)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpPageResult.#ctor(SPC.Core.Dtos.OpResultStatus,System.String,System.Collections.Generic.IReadOnlyList{System.Object},System.Int32)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult"/>类型的新实例
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpPageResult._message">
+            <summary>
+            返回消息字段
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.OpPageResult.Message">
+            <summary>
+            返回消息属性
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Dtos.OpResult">
+            <summary>
+            操作结果
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpResult.#ctor">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpResult.#ctor(SPC.Core.Dtos.OpResultStatus)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpResult.#ctor(System.Object)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult`1"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpResult.#ctor(SPC.Core.Dtos.OpResultStatus,System.String)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpResult.#ctor(SPC.Core.Dtos.OpResultStatus,System.String,System.Object)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult"/>类型的新实例
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.OpResult.Success">
+            <summary>
+            是否操作成功
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpResult._message">
+            <summary>
+            返回消息字段
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.OpResult.Message">
+            <summary>
+            返回消息属性
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Dtos.OpResult`1">
+            <summary>
+            操作结果
+            </summary>
+            <typeparam name="TData">操作结果数据</typeparam>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpResult`1.#ctor">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult`1"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpResult`1.#ctor(SPC.Core.Dtos.OpResultStatus)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult`1"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpResult`1.#ctor(SPC.Core.Dtos.OpResultStatus,System.String)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult`1"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpResult`1.#ctor(`0)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult`1"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Dtos.OpResult`1.#ctor(SPC.Core.Dtos.OpResultStatus,System.String,`0)">
+            <summary>
+            初始化一个<see cref="T:SPC.Core.Dtos.OpResult`1"/>类型的新实例
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.OpResult`1.Success">
+            <summary>
+            是否操作成功
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpResult`1._message">
+            <summary>
+            返回消息字段
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.OpResult`1.Message">
+            <summary>
+            返回消息属性
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpResultStatus.NoChanged">
+            <summary>
+            操作没有引发任何变化，提交取消。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpResultStatus.Success">
+            <summary>
+            操作成功。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpResultStatus.Error">
+            <summary>
+            操作引发内部错误。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpResultStatus.NotExist">
+            <summary>
+            指定参数的数据不存在。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpResultStatus.Exist">
+            <summary>
+            指定参数的数据不存在。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpResultStatus.ValidError">
+            <summary>
+            输入信息验证失败。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpResultStatus.LoginInvalid">
+            <summary>
+            登录失效。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpResultStatus.AuthInvalid">
+            <summary>
+            身份认证信息错误。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpResultStatus.NotLoggedIn">
+            <summary>
+            未登录。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpResultStatus.InsertError">
+            <summary>
+            新增错误
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpResultStatus.UpdateError">
+            <summary>
+            修改错误
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.OpResultStatus.DeleteError">
+            <summary>
+            删除错误
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.PageRequestBase`1.MaxResultCount">
+            <summary>
+            分页条件
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.PageRequestBase`1.SkipCount">
+            <summary>
+            第几页
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.PageRequestBase`1.Sorting">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Dtos.PageRequestBase`1.Filter">
+            <summary>
+            过滤
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.PageResult`1.Items">
+            <summary>
+            数据列表
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.PageResult`1.TotalCount">
+            <summary>
+            总共记录数据
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.Sorting.sortMethod">
+            <summary>
+            排序方法
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Dtos.Sorting.sortFiledName">
+            <summary>
+            排序字段名称
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Extensions.AutoMapExtension.MapTo``1(System.Object)">
+            <summary>
+            单个类型映射
+            </summary>
+            <typeparam name="TDestination"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.AutoMapExtension.MapToList``2(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            集合列表类型映射
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TDestination"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.AutoMapExtension.MapTo``2(``0,``1)">
+            <summary>
+            指定类型之间映射
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TDestination"></typeparam>
+            <param name="source"></param>
+            <param name="destination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.CollectionExtension.IsNullOrEmpty``1(System.Collections.Generic.ICollection{``0})">
+            <summary>
+            判断ICollection是否有值或Null
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.CollectionExtension.AddIfNotContains``1(System.Collections.Generic.ICollection{``0},``0)">
+            <summary>
+            添加ICollection中不存在的值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.ComparableExtension.IsBetween``1(``0,``0,``0)">
+            <summary>
+            检查一个值在最小值和最大值之间
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value">要检查的值</param>
+            <param name="minInclusiveValue">最小(包容)值</param>
+            <param name="maxInclusiveValue">最大(包容)值</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.FirstDayOfMonth(System.DateTime)">
+            <summary>
+            取得某月的第一天
+            </summary>
+            <param name="datetime">要取得月份第一天的时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.LastDayOfMonth(System.DateTime)">
+            <summary>
+            取得某月的最后一天
+            </summary>
+            <param name="datetime">要取得月份最后一天的时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.FirstDayOfPreviousMonth(System.DateTime)">
+            <summary>
+            取得上个月第一天
+            </summary>
+            <param name="datetime">要取得上个月第一天的当前时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.LastDayOfPrdviousMonth(System.DateTime)">
+            <summary>
+            取得上个月的最后一天
+            </summary>
+            <param name="datetime">要取得上个月最后一天的当前时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.TimeStamp(System.DateTime)">
+            <summary>
+            获取时间戳
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.yyyMMddHHmmss(System.DateTime)">
+            <summary>
+            获取yyyMMddHHssmm时间
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.TimeSpanChinese(System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            获取中文间隔时间差
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.ToUnixTimestamp(System.DateTime)">
+            <summary>
+            Converts a DateTime to a Unix Timestamp
+            </summary>
+            <param name="target">This DateTime</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.FromUnixTimestamp(System.Double)">
+            <summary>
+            Converts a Unix Timestamp in to a DateTime
+            </summary>
+            <param name="unixTime">This Unix Timestamp</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.ToDayEnd(System.DateTime)">
+            <summary>
+            Gets the value of the End of the day (23:59)
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.StartOfWeek(System.DateTime,System.DayOfWeek)">
+            <summary>
+            Gets the First Date of the week for the specified date
+            </summary>
+            <param name="dt">this DateTime</param>
+            <param name="startOfWeek">The Start Day of the Week (ie, Sunday/Monday)</param>
+            <returns>The First Date of the week</returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.DaysOfMonth(System.Int32,System.Int32)">
+            <summary>
+            Returns all the days of a month.
+            </summary>
+            <param name="year">The year.</param>
+            <param name="month">The month.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.WeekDayInstanceOfMonth(System.DateTime)">
+            <summary>
+            Determines the Nth instance of a Date's DayOfWeek in a month
+            </summary>
+            <returns></returns>
+            <example>11/29/2011 would return 5, because it is the 5th Tuesday of each month</example>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.TotalDaysInMonth(System.DateTime)">
+            <summary>
+            Gets the total days in a month
+            </summary>
+            <param name="dateTime">The date time.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.ToDateTimeUnspecified(System.DateTime)">
+            <summary>
+            Takes any date and returns it's value as an Unspecified DateTime
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.DateTimeExtension.TrimMilliseconds(System.DateTime)">
+            <summary>
+            Trims the milliseconds off of a datetime
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Core.Extensions.EncryptDecryptExtension">
+            <summary>
+            加密、解密
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Extensions.EncryptDecryptExtension.Base64Encrypt(System.String)">
+            <summary>
+            Base64加密
+            </summary>
+            <param name="input">需要加密的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EncryptDecryptExtension.Base64Encrypt(System.String,System.Text.Encoding)">
+            <summary>
+            Base64加密
+            </summary>
+            <param name="input">需要加密的字符串</param>
+            <param name="encode">字符编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EncryptDecryptExtension.Base64Decrypt(System.String)">
+            <summary>
+            Base64解密
+            </summary>
+            <param name="input">需要解密的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EncryptDecryptExtension.Base64Decrypt(System.String,System.Text.Encoding)">
+            <summary>
+            Base64解密
+            </summary>
+            <param name="input">需要解密的字符串</param>
+            <param name="encode">字符的编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EncryptDecryptExtension.DESEncrypt(System.String,System.String,System.String)">
+            <summary>
+            DES加密
+            </summary>
+            <param name="data">加密数据</param>
+            <param name="key">8位字符的密钥字符串</param>
+            <param name="iv">8位字符的初始化向量字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EncryptDecryptExtension.DESDecrypt(System.String,System.String,System.String)">
+            <summary>
+            DES解密
+            </summary>
+            <param name="data">解密数据</param>
+            <param name="key">8位字符的密钥字符串(需要和加密时相同)</param>
+            <param name="iv">8位字符的初始化向量字符串(需要和加密时相同)</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EncryptDecryptExtension.Md5Encrypt(System.String)">
+            <summary>
+            MD5加密
+            </summary>
+            <param name="input">需要加密的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EncryptDecryptExtension.Md5Encrypt(System.String,System.Text.Encoding)">
+            <summary>
+            MD5加密
+            </summary>
+            <param name="input">需要加密的字符串</param>
+            <param name="encode">字符的编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EncryptDecryptExtension.Md5Encrypt(System.IO.Stream)">
+            <summary>
+            MD5对文件流加密
+            </summary>
+            <param name="sr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EncryptDecryptExtension.ToMD5Encrypt16(System.String,System.Text.Encoding)">
+            <summary>
+            MD5加密(返回16位加密串)
+            </summary>
+            <param name="input"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EncryptDecryptExtension.ToMd5(System.String)">
+            <summary>
+            Md5加密
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EncryptDecryptExtension.DES3Encrypt(System.String,System.String)">
+            <summary>
+            3DES加密
+            </summary>
+            <param name="str"></param>
+            <param name="key">必须16位</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EncryptDecryptExtension.DES3Decrypt(System.String,System.String)">
+            <summary>
+            3DES解密
+            </summary>
+            <param name="str"></param>
+            <param name="key">必须16位</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumerableExtension.IsAny``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            确定Enumerable是否包含任何元素。
+            </summary>
+            <typeparam name="T">Enumerable对象类型</typeparam>
+            <param name="t">Enumerable对象</param>
+            <returns>如果源Enumerable包含任何元素，则为 true；否则为 false。</returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumerableExtension.StringJoin``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            将Enumerable对象转换成字符串，多个时按分隔符分隔
+            </summary>
+            <typeparam name="T">Enumerable对象的类型</typeparam>
+            <param name="source">Enumerable对象</param>
+            <param name="separator">分隔符（默认,）</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumerableExtension.DistinctBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            去重
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TKey"></typeparam>
+            <param name="source"></param>
+            <param name="keySelector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumerableExtension.ItmesEquals``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            比较两个集合中的每个元素是否都一样
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TKey"></typeparam>
+            <param name="source1"></param>
+            <param name="source2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumerableExtension.Each2Int(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            将Enumerable对象转换成列表对象
+            </summary>
+            <param name="list">Enumerable对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumerableExtension.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            枚举迭代Enumerable对象，按照传入方法操作
+            </summary>
+            <typeparam name="T">Enumerable对象类型</typeparam>
+            <param name="list">Enumerable对象</param>
+            <param name="action">操作方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumerableExtension.CustomOrderBy``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean}[])">
+            <summary>
+            自定义排序，根据条件的先后将原List重新排序
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list">需要排序的List</param>
+            <param name="predicates">表达式条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumerableExtension.Contains``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},``1)">
+            <summary>
+            是否包含
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TKey"></typeparam>
+            <param name="collection"></param>
+            <param name="selectFunc"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Core.Extensions.EnumExtension">
+            <summary>
+            枚举 扩展类
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumExtension.ToDisplay(System.Enum)">
+            <summary>
+            获取DisplayAttribute上指定的Name
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumExtension.ToDescription(System.Enum)">
+            <summary>
+             获取DescriptionAttribute上指定的Description
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumExtension.ToEnum``1(System.Int32,``0)">
+            <summary>
+             转化为枚举类型，转化不成功为默认值
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumExtension.GetDisplayName(System.Enum,System.String)">
+            <summary>
+            获取DisplayAttribute上指定的Name
+            </summary>
+            <param name="value"></param>
+            <param name="defVal">defVal</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumExtension.GetDisplayShortName(System.Enum,System.String)">
+            <summary>
+            获取DisplayAttribute上指定的ShortName
+            </summary>
+            <param name="value"></param>
+            <param name="defVal">defVal</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumExtension.GetDisplayDesc(System.Enum,System.String)">
+            <summary>
+            获取DisplayAttribute上指定的Desc
+            </summary>
+            <param name="value"></param>
+            <param name="defVal">defVal</param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Core.Extensions.EnumEntry`2">
+            <summary>
+            枚举Entry
+            </summary>
+            <typeparam name="TEnum">枚举类型</typeparam>
+            <typeparam name="TRaw">枚举类型的基础类型</typeparam>
+        </member>
+        <member name="P:SPC.Core.Extensions.EnumEntry`2.RawValue">
+            <summary>
+            基础数值类型
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Extensions.EnumEntry`2.EnumValue">
+            <summary>
+            原始枚举类型
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Extensions.EnumEntry`2.EnumString">
+            <summary>
+            枚举类型字符串表示
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Extensions.EnumEntry`2.Description">
+            <summary>
+            枚举类型的文字描述(DescriptionAttribute)
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Extensions.EnumEntry`2.DisplayName">
+            <summary>
+            枚举类型的本地字符串名称(DisplayAttribute.Name)
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Extensions.EnumEntry`2.DisplayShortName">
+            <summary>
+            枚举类型的本地字符串简称(DisplayAttribute.ShortName)
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Extensions.EnumEntry`2.DisplayOrder">
+            <summary>
+            枚举类型的Order(DisplayAttribute.Order)
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Extensions.EnumEntry`2.DisplayDesc">
+            <summary>
+            枚举类型的本地字符串说明(DisplayAttribute.Description)
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Extensions.EnumEntry`2.CustomName">
+            <summary>
+            自定义名称
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Extensions.EnumHelper">
+            <summary>
+            枚举类型的帮助类
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumHelper.ConvertEnumToList``1(System.Type,System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String,System.String})">
+            <summary>
+            将指定枚举类型转换成List，用来绑定DropDownList
+            </summary>
+            <typeparam name="T">枚举类型的基础型</typeparam>
+            <param name="enumType">枚举类型</param>
+            <param name="excludes">排除的枚举类型集合（基础型集合）</param>
+            <param name="func">枚举类型对应的文字描述</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumHelper.GetEnumShortNameByCode``2(System.Collections.Generic.List{SPC.Core.Extensions.EnumEntry{``0,``1}},System.String,System.String,System.String)">
+            <summary>
+            获取EnumEntry元素简称
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="T1"></typeparam>
+            <param name="enums"></param>
+            <param name="code">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumHelper.GetEnumDescription(System.Enum)">
+            <summary>
+            取得枚举类型的说明文字
+            </summary>
+            <param name="objEnum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumHelper.GetEnumDisplay(System.Enum,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="objEnum"></param>
+            <param name="flag">默认值为0.获取Display属性Name值，否则获取Descriptiom</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumHelper.GetEnumDisplayAttributs(System.Enum)">
+            <summary>
+            取得枚举类型的Display属性
+            </summary>
+            <param name="objEnum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.EnumHelper.ConvertToEnum``1(System.String,``0)">
+            <summary>
+            把值转换为相应的枚举类型
+            </summary>
+            <typeparam name="T">枚举类型</typeparam>
+            <param name="rawVal">值</param>
+            <param name="defVal">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.ExceptionExtension.GetInnerException(System.Exception)">
+            <summary>
+            获取最里层异常信息
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.HttpContextAccessorExtension.CurrentUser(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            获取当前登录人员信息
+            </summary>
+            <param name="httpContextAccessor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.ObjectExtension.As``1(System.Object)">
+            <summary>
+            Used to simplify and beautify casting an object to a type. 
+            </summary>
+            <typeparam name="T">Type to be casted</typeparam>
+            <param name="obj">Object to cast</param>
+            <returns>Casted object</returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.ObjectExtension.To``1(System.Object)">
+            <summary>
+            Converts given object to a value or enum type using <see cref="M:System.Convert.ChangeType(System.Object,System.TypeCode)"/> or <see cref="M:System.Enum.Parse(System.Type,System.String)"/> method.
+            </summary>
+            <param name="obj">Object to be converted</param>
+            <typeparam name="T">Type of the target object</typeparam>
+            <returns>Converted object</returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.ObjectExtension.IsIn``1(``0,``0[])">
+            <summary>
+            Check if an item is in a list.
+            </summary>
+            <param name="item">Item to check</param>
+            <param name="list">List of items</param>
+            <typeparam name="T">Type of the items</typeparam>
+        </member>
+        <member name="M:SPC.Core.Extensions.ObjectExtension.ToJsonString(System.Object)">
+            <summary>
+            将object转换成json字符串
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.QueryableExtension.GetCombinationExpression(System.Linq.Expressions.Expression,System.Type,System.Reflection.PropertyInfo)">
+            <summary>
+            根据组合字段获取其属性路径
+            </summary>
+            <param name="sourceProperty"></param>
+            <param name="sourcePropertys"></param>
+            <param name="targetItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.QueryableExtension.WhereIf``1(System.Linq.IQueryable{``0},System.Boolean,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            WhereIf语句
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query"></param>
+            <param name="condition"></param>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.QueryableExtension.PageBy``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            分页查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query"></param>
+            <param name="skipCount"></param>
+            <param name="maxResultCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.QueryableExtension.Select``1(System.Linq.IQueryable)">
+            <summary>        
+            需要在Dto做特性映射，如：[AutoMap(typeof(MyClass2))]
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.QueryableExtension.OrderBy``1(System.Linq.IQueryable{``0},System.String)">
+            <summary> 
+            Linq动态排序 
+            </summary> 
+            <typeparam name="T">T</typeparam> 
+            <param name="source">要排序的数据源</param> 
+            <param name="value">排序依据（加空格）排序方式</param> 
+            <returns>IOrderedQueryable</returns> 
+        </member>
+        <member name="M:SPC.Core.Extensions.QueryableExtension.ThenBy``1(System.Linq.IOrderedQueryable{``0},System.String)">
+            <summary> 
+            Linq动态排序再排序 
+            </summary> 
+            <typeparam name="T">T</typeparam> 
+            <param name="source">要排序的数据源</param> 
+            <param name="value">排序依据（加空格）排序方式</param> 
+            <returns>IOrderedQueryable</returns> 
+        </member>
+        <member name="M:SPC.Core.Extensions.QueryableExtension.SortBy``1(System.Linq.IQueryable{``0},System.Collections.Generic.ICollection{SPC.Core.Dtos.Sorting})">
+            <summary>
+            Linq多条件排序
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <param name="methods"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.QueryableExtension.SortBy``1(System.Linq.IQueryable{``0},System.Collections.Generic.ICollection{System.Tuple{System.String,SPC.Core.Models.SortMethod}})">
+            <summary>
+            Linq多条件排序
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <param name="methods"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.QueryableExtension.Distinct``2(System.Linq.IQueryable{``0},System.Func{``0,``1})">
+            <summary>
+            去重
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TKey"></typeparam>
+            <param name="source"></param>
+            <param name="keySelector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.QueryableExtension.And``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            拼接and 条件语句
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="first"></param>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.QueryableExtension.Or``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            拼接or 条件语句
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="first"></param>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.QueryableExtension.GetFromEntityExpression(System.Linq.Expressions.Expression,System.Type,SPC.Core.Attribute.FromEntityAttribute)">
+            <summary>
+            根据FromEntityAttribute 的值获取属性对应的路径
+            </summary>
+            <param name="sourceProperty"></param>
+            <param name="sourceType"></param>
+            <param name="fromEntityAttribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.StringExtension.ToJsonModel``1(System.String)">
+            <summary>
+            将字符串转换成object
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.StringExtension.IsNullOrEmpty(System.String)">
+            <summary>
+            字符串是否为Null、空字符串组成。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.StringExtension.IsNullOrWhiteSpace(System.String)">
+            <summary>
+            字符串是否为Null、空字符串或仅由空白字符组成。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.StringExtension.Left(System.String,System.Int32)">
+            <summary>
+            从字符串的开头得到一个字符串的子串
+            </summary>
+            <param name="str"></param>
+            <param name="len"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.StringExtension.Right(System.String,System.Int32)">
+            <summary>
+            从字符串的末尾得到一个字符串的子串
+            </summary>
+            <param name="str"></param>
+            <param name="len"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.StringExtension.ToEnum``1(System.String)">
+            <summary>
+            字符串转枚举
+            </summary>
+            <typeparam name="T">类型的枚举</typeparam>
+            <param name="value">字符串值转换</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.StringExtension.ToEnum``1(System.String,System.Boolean)">
+            <summary>
+            字符串转枚举
+            </summary>
+            <typeparam name="T">类型的枚举</typeparam>
+            <param name="value">字符串值转换</param>
+            <param name="ignoreCase">忽略大小写</param>
+            <returns>Returns enum object</returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.StringExtension.IsInteger(System.String)">
+            <summary>
+            验证正整数
+            </summary>      
+        </member>
+        <member name="M:SPC.Core.Extensions.StringExtension.IsEmail(System.String)">
+            <summary>
+            验证是否Email
+            </summary>     
+        </member>
+        <member name="M:SPC.Core.Extensions.StringExtension.IsIdentityCard(System.String)">
+            <summary>
+            验证身份证
+            </summary>        
+        </member>
+        <member name="M:SPC.Core.Extensions.StringExtension.IsTelephone(System.String)">
+            <summary>
+            验证电话号码
+            </summary>
+            <param str_telephone=""></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.StringExtension.IsHandset(System.String)">
+            <summary>
+            验证手机号码
+            </summary>
+            <param name="str_handset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.StringExtension.IsIDcard(System.String)">
+            <summary>
+            验证身份证号
+            </summary>
+            <param name="str_idcard"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Extensions.StringExtension.IsPostalcode(System.String)">
+            <summary>
+            验证邮编
+            </summary>
+            <param name="str_postalcode"></param>
+        </member>
+        <member name="M:SPC.Core.Filter.ExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            发生异常时进入
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:SPC.Core.Filter.ExceptionFilter.OnExceptionAsync(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            异步发生异常时进入
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Http.HttpHelper.HttpPost(System.String,System.String,System.String,System.Int32,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            发起POST同步请求
+            
+            </summary>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <param name="timeOut"></param>
+            <param name="contentType">application/xml、application/json、application/text、application/x-www-form-urlencoded</param>
+            <param name="headers">填充消息头</param>        
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Http.HttpHelper.HttpPostAsync(System.String,System.String,System.String,System.Int32,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            发起POST异步请求
+            </summary>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <param name="timeOut"></param>
+            <param name="contentType">application/xml、application/json、application/text、application/x-www-form-urlencoded</param>
+            <param name="headers">填充消息头</param>        
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Http.HttpHelper.HttpGet(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            发起GET同步请求
+            </summary>
+            <param name="url"></param>
+            <param name="headers"></param>
+            <param name="contentType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Http.HttpHelper.HttpGetAsync(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            发起GET异步请求
+            </summary>
+            <param name="url"></param>
+            <param name="headers"></param>
+            <param name="contentType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.IocHelper.RuntimeHelper.GetAllAssemblies">
+            <summary>
+            获取项目程序集，排除所有的系统程序集(Microsoft.***、System.***等)、Nuget下载包
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Core.IocHelper.ServiceExtension">
+            <summary>
+            IServiceCollection扩展
+            </summary>
+        </member>
+        <member name="M:SPC.Core.IocHelper.ServiceExtension.RegisterAssembly(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+            <summary>
+            用DI批量注入接口程序集中对应的实现类。
+            <para>
+            需要注意的是，这里有如下约定：
+            IUserService --> UserService, IUserRepository --> UserRepository.
+            </para>
+            </summary>
+            <param name="service"></param>
+            <param name="interfaceAssemblyName">接口程序集的名称（不包含文件扩展名）</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.IocHelper.ServiceExtension.RegisterAssembly(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String)">
+            <summary>
+            用DI批量注入接口程序集中对应的实现类。
+            </summary>
+            <param name="service"></param>
+            <param name="interfaceAssemblyName">接口程序集的名称（不包含文件扩展名）</param>
+            <param name="implementAssemblyName">实现程序集的名称（不包含文件扩展名）</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Log.BaseHandler`1.#ctor(System.String)">
+            <summary>
+            构造函数初始化
+            </summary>
+            <param name="loggerConfig"></param>
+        </member>
+        <member name="M:SPC.Core.Log.BaseHandler`1.WriteLog">
+            <summary>
+            写入日志,虚函数.可进行重写
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Log.BaseHandler`1.InsertDb">
+            <summary>
+            插入数据库
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Log.BaseHandler`1.RequestData(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            获取请求数据
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SPC.Core.Log.BaseHandler`1.LoggerConfig">
+            <summary>
+            需要启动的日志模式名称
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Log.ExceptionLogHandler.#ctor(System.Exception,Microsoft.AspNetCore.Http.IHttpContextAccessor,SPC.Core.Auth.PrincipalUser)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="exception">错误信息</param>
+            <param name="accessor">Ip信息</param>
+            <param name="principalUser"></param>
+        </member>
+        <member name="M:SPC.Core.Log.ExceptionLogHandler.WriteLog">
+            <summary>
+            重写基类
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Log.ExceptionLogHandler.ExceptionHtml(SPC.Core.Log.ExceptionLog)">
+            <summary>
+            获取异常Html
+            </summary>
+            <param name="log"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Log.ExceptionLogHandler.GetExceptionFullMessage(System.Exception)">
+            <summary>
+            获取完整的异常消息，包括内部异常消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:SPC.Core.Log.LogWriter.LogPath">
+            <summary>
+            日志记录地址
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Log.LogWriter.WriteLog(System.String,System.String,System.String)">
+            <summary>
+            记录日志
+            </summary>
+            <param name="folderName">文件夹名字</param>
+            <param name="message">日志内容</param>
+            <param name="path">日志存放磁盘路径</param>
+        </member>
+        <member name="M:SPC.Core.Log.LogWriter.WriteLog(System.String,System.String,System.String,System.String)">
+            <summary>
+            日志记录
+            </summary>
+            <param name="folderName">文件夹名字</param>
+            <param name="message">内容</param>
+            <param name="fileName">文件名（不带后缀）</param>
+            <param name="path">保存文件地址</param>
+        </member>
+        <member name="M:SPC.Core.Log.LogWriter.WriteLog(System.String,System.Exception,System.String)">
+            <summary>
+            记录异常日志
+            </summary>
+            <param name="folderName">文件夹名称</param>
+            <param name="e">异常</param>
+            <param name="fileName">文件名称</param>
+        </member>
+        <member name="T:SPC.Core.Log.FolderName">
+            <summary>
+            文件夹名称
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Log.ExceptionLog">
+            <summary>
+                异常日志实体
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.ExceptionLog.ExceptionLogId">
+            <summary>
+            错误Id
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.ExceptionLog.Message">
+            <summary>
+                消息
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.ExceptionLog.StackTrace">
+            <summary>
+                堆栈信息
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.ExceptionLog.InnerException">
+            <summary>
+                内部信息
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.ExceptionLog.RemoteIp">
+            <summary>
+                客户端Id
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.ExceptionLog.RemoteIpAddress">
+            <summary>
+                客户端Ip对应地址
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.ExceptionLog.RequestUrl">
+            <summary>
+                请求Url
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.ExceptionLog.RequestData">
+            <summary>
+                请求数据
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.ExceptionLog.HttpMethod">
+            <summary>
+                请求方式
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.ExceptionLog.CreateUserId">
+            <summary>
+                创建人员
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.ExceptionLog.CreateUserCode">
+            <summary>
+                创建人员登录代码
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.ExceptionLog.CreateUserName">
+            <summary>
+                创建人员名字
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.ExceptionLog.CreateTime">
+            <summary>
+                创建时间
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Log.ServiceLog">
+            <summary>
+                服务调用日志实体
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Log.LoginLog">
+            <summary>
+                登录日志
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.LoginLog.RemoteIp">
+            <summary>
+                客户端Id
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.LoginLog.RemoteIpAddress">
+            <summary>
+                客户端Ip对应地址
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.LoginLog.LoginTime">
+            <summary>
+                登录时间
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.LoginLog.LoginOutTime">
+            <summary>
+                退出时间
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.LoginLog.StandingTime">
+            <summary>
+                停留时间(分钟)
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.LoginLog.CreateUserId">
+            <summary>
+                创建人员
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.LoginLog.CreateUserCode">
+            <summary>
+                创建人员登录代码
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.LoginLog.CreateUserName">
+            <summary>
+                创建人员名字
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.LoginLog.CreateTime">
+            <summary>
+                创建时间
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Log.DataLog">
+            <summary>
+                数据日志
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.DataLog.OperateType">
+            <summary>
+                操作类型:0新增/2编辑/3删除
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.DataLog.OperateTable">
+            <summary>
+                操作表
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.DataLog.OperateData">
+            <summary>
+                操作前数据:若为新增，删除等数据
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.DataLog.OperateAfterData">
+            <summary>
+                操作后数据:编辑操作
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.DataLog.CreateUserId">
+            <summary>
+                创建人员
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.DataLog.CreateUserCode">
+            <summary>
+                创建人员登录代码
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.DataLog.CreateUserName">
+            <summary>
+                创建人员名字
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.DataLog.CreateTime">
+            <summary>
+                创建时间
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Log.SqlLog">
+            <summary>
+                Sql日志
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.SqlLog.SqlLogId">
+            <summary>
+                sql日志Id
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.SqlLog.OperateSql">
+            <summary>
+                操作sql
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.SqlLog.EndDateTime">
+            <summary>
+                结束时间
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.SqlLog.ElapsedTime">
+            <summary>
+                耗时
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.SqlLog.Parameter">
+            <summary>
+                参数
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Log.SqlLog.CreateTime">
+            <summary>
+                创建时间
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Middlewares.ErrorHandlingMiddleware">
+            <summary>
+            错误中间件
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Middlewares.MiddlewareExtensions">
+            <summary>
+            中间件扩展
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Middlewares.MiddlewareExtensions.UseLog(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            日志中间件
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Middlewares.MiddlewareExtensions.UseRequestProviderMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Authorization权限中间件
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Middlewares.MiddlewareExtensions.UseErrorHandlingMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            错误中间件注册
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Core.Middlewares.RequestProviderMiddleware">
+            <summary>
+            请求中间件验证:必须设置为Post请求,都要携带token
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Middlewares.RequestProviderMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="M:SPC.Core.Middlewares.RequestProviderMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            引入
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Middlewares.RequestProviderMiddleware.ReturnBadRequest(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            请求时错误
+            </summary>
+            <param name="context"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.PageSize">
+            <summary>
+            默认分页数量
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.PageIndex">
+            <summary>
+            默认第几页
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.SQLServerConnectionString">
+            <summary>
+            sqlserver 链接字符串
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.MySqlConnectionString">
+            <summary>
+            mysql 链接字符串 
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.DataBaseType">
+            <summary>
+            数据库类型设置  0-sqlserver,1-mysql 
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.OrderBy">
+            <summary>
+            默认排序
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.SecurityKey">
+            <summary>
+            安全key
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.ExpiresTime">
+            <summary>
+            登录过期时间 分钟
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.Issuer">
+            <summary>
+            token是谁颁发的
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.Audience">
+            <summary>
+            token可以给哪些客户端使用
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.ServerUrl">
+            <summary>
+            接口地址
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.RoleManagerMenuID">
+            <summary>
+            角色管理菜单ID 用来区分敏感授权
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.DefaultPassword">
+            <summary>
+            注册用户默认密码
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.InjectionWPID">
+            <summary>
+            注塑工序id
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.SwayWPID">
+            <summary>
+            摆件工序id
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.FiringWPID">
+            <summary>
+            烧结工序id
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.PlasticWPID">
+            <summary>
+            整形工序id
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.SizeWPID">
+            <summary>
+            尺寸工序id
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.AppSettings.VisionWPID">
+            <summary>
+            VisionWPID
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.ExecResult.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.ExecResult.Status">
+            <summary>
+            执行状态
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.ExecResult.Result">
+            <summary>
+            执行结果数据
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.ExecResult.Message">
+            <summary>
+            返回消息
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ExecResultStatus.NoChanged">
+            <summary>
+            操作没有引发任何变化，提交取消。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ExecResultStatus.Success">
+            <summary>
+            操作成功。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ExecResultStatus.Error">
+            <summary>
+            操作引发错误。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ExecResultStatus.NotExist">
+            <summary>
+            指定参数的数据不存在。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ExecResultStatus.Exist">
+            <summary>
+            指定参数的数据不存在。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ExecResultStatus.ValidError">
+            <summary>
+            输入信息验证失败。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ExecResultStatus.LoginInvalid">
+            <summary>
+            登录失效。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ExecResultStatus.AuthInvalid">
+            <summary>
+            身份认证信息错误。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ExecResultStatus.NotLoggedIn">
+            <summary>
+            未登录。
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ExecResultStatus.InsertError">
+            <summary>
+            新增错误
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ExecResultStatus.UpdateError">
+            <summary>
+            修改错误
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ExecResultStatus.DeleteError">
+            <summary>
+            删除失败
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.Filter.FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.Filter.ListFieldName">
+            <summary>
+            字段列表
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.Filter.Value">
+            <summary>
+            字段值
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.Filter.ListValue">
+            <summary>
+            字段值列表
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.Filter.Operator">
+            <summary>
+            过滤运算符
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.SortMethod.ASC">
+            <summary>
+            升序
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.SortMethod.DESC">
+            <summary>
+            降序
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Models.ResultSign">
+            <summary>
+             调用服务或业务逻辑的返回标识枚举,使用DataContract特性,表示可序列化
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ResultSign.Successful">
+            <summary>
+                操作成功
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ResultSign.Warning">
+            <summary>
+                警告
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Models.ResultSign.Error">
+            <summary>
+                操作引发错误
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Models.OperateStatus">
+            <summary>
+                调用调用服务或业务逻辑的操作状态,使用DataContract特性,表示可序列化
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Models.OperateStatus.#ctor">
+            <summary>
+                构造函数:默认为失败
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.OperateStatus.ResultSign">
+            <summary>
+                返回标记
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.OperateStatus.Message">
+            <summary>
+                消息字符串(有多语言后将删除该属性)
+            </summary>
+        </member>
+        <member name="T:SPC.Core.Models.OperateStatus`1">
+            <summary>
+            返回结果带实体信息
+            </summary>
+            <typeparam name="T">实体信息</typeparam>
+        </member>
+        <member name="T:SPC.Core.Models.OperateType">
+            <summary>
+            操作类型
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.Pagination.Collection">
+            <summary>
+            查询当前页面结果集
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.Pagination.TotalCount">
+            <summary>
+            查询结果集总数量
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.Pagination.PageSize">
+            <summary>
+            查询页的显示结果数量
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.Pagination.PageNumber">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.Pagination.PageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.PaginationFilter.Filters">
+            <summary>
+            过滤条件列表
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.PaginationFilter.Sortings">
+            <summary>
+            排序规则
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.PaginationFilter.PageSize">
+            <summary>
+            查询页的显示结果数量
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.PaginationFilter.PageIndex">
+            <summary>
+            查询页的索引
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.SortFilter.Filters">
+            <summary>
+            过滤条件列表
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Models.SortFilter.Sortings">
+            <summary>
+            排序规则
+            </summary>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.GetDataTable(System.String,System.Collections.Generic.List{System.Drawing.Point},System.Int32,System.Int32)">
+            <summary>
+            读取Excel到DataTable
+            </summary>
+            <param name="filePath">Excel路径</param>
+            <param name="headPoint">自定义表头（坐标，从0开始计数）</param>
+            <param name="validRow">内容开始行（从0开始计数）</param>
+            <param name="sheetIndex">读取第几个sheet</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.GetDataTables(System.IO.FileStream,System.Boolean,System.Int32)">
+            <summary>
+            Excel 转DataTable
+            </summary>
+            <param name="stream">Excel文件流</param>
+            <param name="isOldThan2007">是否低于07版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.GetDataTables(System.String,System.Int32)">
+            <summary>
+            Excel 转DataTable集合
+            </summary>
+            <param name="filePath">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.ToEntitys``1(System.String,System.Int32)">
+            <summary>
+            Excel转泛型T
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="path"></param>
+            <param name="sheetIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.ToEntitys``1(System.IO.Stream,System.String,System.Int32)">
+            <summary>
+            Excel转泛型T
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="stream"></param>
+            <param name="fileName"></param>
+            <param name="sheetIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.ToEntitys``1(NPOI.SS.UserModel.IWorkbook,System.Int32)">
+            <summary>
+            Excel转泛型T
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="book"></param>
+            <param name="sheetIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.DataTableToExcel(System.Data.DataTable,System.Boolean)">
+            <summary>
+            将DataTable读到Excle的内存流
+            </summary>
+            <param name="dataTable"></param>
+            <param name="isOldThan2007">是否低于2007</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.DataTableToExcel(System.Data.DataTable,System.String)">
+            <summary>
+            将DataTable写入excel文件
+            </summary>
+            <param name="dataTable"></param>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.SaveExcel(System.String,System.String,System.Int32,System.Int32,System.Collections.Generic.Dictionary{System.Int32,System.String})">
+            <summary>
+            保存结果到源Excel
+            </summary>
+            <param name="filePath">源Excel文件路径</param>
+            <param name="savePath">要保存的路径</param>
+            <param name="sheetIndex">第几个Sheet</param>
+            <param name="columnIndex">第多少列</param>
+            <param name="rowsResult">行 对应要写的注释</param>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.SaveExcel(System.String,System.String,SPC.Core.NPOI.SheetEntity)">
+            <summary>
+            保存结果到源Excel
+            </summary>
+            <param name="filePath">源Excel文件路径</param>
+            <param name="savePath">要保存的路径</param>
+            <param name="sheetEntity">要记录的结果相关信息</param>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.SaveExcel(System.String,System.IO.FileStream,System.Boolean,SPC.Core.NPOI.SheetEntity)">
+            <summary>
+            保存结果到源Excel
+            </summary>
+            <param name="savePath">要保存的路径</param>
+            <param name="stream"></param>
+            <param name="isOldThan2007">是否低于2007的版本</param>
+            <param name="sheetEntity">要记录的结果相关信息</param>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.SaveExcel(System.String,System.String,System.Collections.Generic.List{SPC.Core.NPOI.SheetEntity})">
+            <summary>
+            保存结果到源Excel
+            </summary>
+            <param name="filePath">源Excel文件路径</param>
+            <param name="savePath">要保存的路径</param>        
+            <param name="sheetEntityList">要记录的结果相关信息</param>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.SaveExcel(System.String,System.IO.FileStream,System.Boolean,System.Collections.Generic.List{SPC.Core.NPOI.SheetEntity})">
+            <summary>
+            保存结果到源Excel
+            </summary>
+            <param name="savePath">要保存的路径</param>
+            <param name="stream"></param>
+            <param name="isOldThan2007">是否低于2007的版本</param>   
+            <param name="sheetEntityList">要记录的结果相关信息</param>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.IsBlankRow(NPOI.SS.UserModel.IRow,System.Int32)">
+            <summary>
+            判斷是否空白行
+            </summary>
+            <param name="row"></param>
+            <param name="cellNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.SetValue(NPOI.SS.UserModel.ICell,System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            读Excel单元格的数据
+            </summary>
+            <param name="cell">Excel单元格</param>
+            <param name="type">列数据类型</param>
+            <param name="obj"></param>
+            <returns>object 单元格数据</returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.GetDataTable(NPOI.SS.UserModel.IWorkbook,System.Int32,System.Int32)">
+            <summary>
+            Excel转成DataTable
+            </summary>
+            <param name="stream"></param>
+            <param name="isOldThan2007">excel版本是否低于2007</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIHelper.GetDataTable(NPOI.SS.UserModel.IWorkbook,System.Collections.Generic.List{System.Drawing.Point},System.Int32,System.Int32)">
+            <summary>
+             Excel转成DataTable
+            </summary>
+            <param name="book"></param>
+            <param name="headPoint">表头定位</param>
+            <param name="validRow">从第几行开始算有效数据</param>
+            <param name="sheetIndex">第几个sheet</param>
+            <returns></returns>
+        </member>
+        <member name="P:SPC.Core.NPOI.SheetEntity.SheetIndex">
+            <summary>
+            第几个Sheet
+            </summary>
+        </member>
+        <member name="P:SPC.Core.NPOI.SheetEntity.ColumnIndex">
+            <summary>
+            第多少列
+            </summary>
+        </member>
+        <member name="P:SPC.Core.NPOI.SheetEntity.RowsResult">
+            <summary>
+            行 对应要写的注释
+            </summary>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIExtensions.GetValue(NPOI.SS.UserModel.IRow,System.Int32)">
+            <summary>
+            获取XSSFRow的值（全部统一转成字符串）
+            </summary>
+            <param name="row"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIExtensions.GetValueByCellStyle(NPOI.SS.UserModel.ICell,System.Nullable{NPOI.SS.UserModel.CellType})">
+            <summary>
+            根据单元格的类型获取单元格的值
+            </summary>
+            <param name="rowCell"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIExtensions.ToWorkbook(System.Data.DataTable,System.Boolean)">
+            <summary>
+            把DataTable数据写入Workbook
+            </summary>
+            <param name="dataTable"></param>
+            <param name="isOldThan2007">是否低于2007</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIExtensions.ToDatatableFromList``1(System.Collections.Generic.List{``0})">
+            <summary>
+            list数据转换datatable
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sourceList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.NPOIExtensions.ToWorkbook(System.Collections.Generic.List{System.Data.DataTable},System.Boolean)">
+            <summary>
+            把DataTable数据写入Workbook
+            </summary>
+            <param name="dataTables"></param>
+            <param name="isOldThan2007"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.DataTableExtensions.GetEntityList``1(System.Data.DataTable,System.Action{System.Data.DataRow,``0})">
+            <summary>
+            DataTable转换成实体集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="tableList"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.DataTableExtensions.GetEntityList``1(System.Collections.Generic.List{System.Data.DataTable},System.Action{System.Data.DataRow,``0})">
+            <summary>
+            DataTable转换成实体集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="tableList"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.NPOI.DataTableExtensions.ToDataTable``1(System.Collections.Generic.List{``0},System.Collections.Generic.Dictionary{System.String,System.String},System.Action{System.Data.DataRow,``0})">
+            <summary>
+            实体集合转换成DataTable
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="listEntity"></param>
+            <param name="headList"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Route.MvcOptionsExtensions.UseCentralRoutePrefix(Microsoft.AspNetCore.Mvc.MvcOptions,Microsoft.AspNetCore.Mvc.Routing.IRouteTemplateProvider)">
+            <summary>
+            扩展方法
+            </summary>
+            <param name="opts"></param>
+            <param name="routeAttribute"></param>
+        </member>
+        <member name="T:SPC.Core.Route.RouteConvention">
+            <summary>
+            全局路由前缀配置
+            </summary>
+        </member>
+        <member name="F:SPC.Core.Route.RouteConvention._centralPrefix">
+            <summary>
+            定义一个路由前缀变量
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Route.RouteConvention.#ctor(Microsoft.AspNetCore.Mvc.Routing.IRouteTemplateProvider)">
+            <summary>
+            调用时传入指定的路由前缀
+            </summary>
+            <param name="routeTemplateProvider"></param>
+        </member>
+        <member name="M:SPC.Core.Snowflake.IdWorker.GetTimestamp">
+            <summary>
+            生成当前时间戳
+            </summary>
+            <returns>毫秒</returns>
+        </member>
+        <member name="M:SPC.Core.Snowflake.IdWorker.GetNextTimestamp(System.Int64)">
+            <summary>
+            获取下一微秒时间戳
+            </summary>
+            <param name="lastTimestamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Snowflake.IdWorker.GetId">
+            <summary>
+            获取长整形的ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Core.TreeHelper.TreeModel`1">
+            <summary>
+            返回树信息（树公共类）
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:SPC.Core.TreeHelper.TreeModel`1.parentId">
+            <summary>
+            父id
+            </summary>
+        </member>
+        <member name="P:SPC.Core.TreeHelper.TreeModel`1.title">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:SPC.Core.TreeHelper.TreeModel`1.level">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="P:SPC.Core.TreeHelper.TreeModel`1.isLeaf">
+            <summary>
+            是否为叶子节点
+            </summary>
+        </member>
+        <member name="P:SPC.Core.TreeHelper.TreeModel`1.expanded">
+            <summary>
+            是否展开
+            </summary>
+        </member>
+        <member name="P:SPC.Core.TreeHelper.TreeModel`1.children">
+            <summary>
+            子级
+            </summary>
+        </member>
+        <!-- 对于成员“T:SPC.Core.Utility.ConfigHelper”忽略有格式错误的 XML 注释 -->
+        <member name="M:SPC.Core.Utility.ConfigHelper.#cctor">
+            <summary>
+            静态构造函数
+            </summary>
+        </member>
+        <member name="P:SPC.Core.Utility.ConfigHelper.Configuration">
+            <summary>
+            配置
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Utility.ConfigHelper.GetConnectionString(System.String)">
+            <summary>
+            Shorthand for GetSection("ConnectionStrings")[name].
+            </summary>
+            <param name="name">The connection string key.</param>
+            <returns>The value</returns>
+        </member>
+        <member name="M:SPC.Core.Utility.ConfigHelper.GetSection(System.String)">
+            <summary>
+            Gets a configuration sub-section with the specified key.
+            </summary>
+            <param name="key">The key of the configuration section.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSection" />.</returns>
+            <remarks>
+                This method will never return <c>null</c>. If no matching sub-section is found with the specified key,
+                an empty <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSection" /> will be returned.
+            </remarks>
+        </member>
+        <member name="M:SPC.Core.Utility.ConfigHelper.Get``1">
+            <summary>
+            Attempts to bind the configuration instance to a new instance of type T.
+            If this configuration section has a value, that will be used.
+            Otherwise binding by matching property names against configuration keys recursively.
+            </summary>
+            <typeparam name="T">The type of the new instance to bind.</typeparam>
+            <param name="configuration">The configuration instance to bind.</param>
+            <returns>The new instance of T if successful, default(T) otherwise.</returns>
+        </member>
+        <member name="M:SPC.Core.Utility.ConfigHelper.GetValue``1(System.String)">
+            <summary>
+            Extracts the value with the specified key and converts it to type T.
+            </summary>
+            <typeparam name="T">The type to convert the value to.</typeparam>
+            <param name="configuration">The configuration.</param>
+            <param name="key">The key of the configuration section's value to convert.</param>
+            <returns>The converted value.</returns>
+        </member>
+        <member name="M:SPC.Core.Utility.ConfigHelper.GetValue``1(System.String,``0)">
+            <summary>
+            Extracts the value with the specified key and converts it to type T.
+            </summary>
+            <typeparam name="T">The type to convert the value to.</typeparam>
+            <param name="key">The key of the configuration section's value to convert.</param>
+            <param name="defaultValue">The default value to use if no value is found.</param>
+            <returns>The converted value.</returns>
+        </member>
+        <member name="M:SPC.Core.Utility.CultureHelper.IsRighToLeft">
+            <summary>
+            Returns true if the language is a right-to-left language. Otherwise, false.
+            </summary>
+        </member>
+        <!-- 对于成员“M:SPC.Core.Utility.CultureHelper.GetImplementedCulture(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:SPC.Core.Utility.CultureHelper.GetDefaultCulture">
+            <summary>
+            Returns default culture name which is the first name decalared (e.g. en-US)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Utility.IpBrowserUtil.GetRemoteIp(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            获取客户端Ip
+            </summary>
+            <param name="accessor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Utility.IpBrowserUtil.GetRemoteIpAddress(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            获取客户端Ip物理地址
+            </summary>
+            <param name="accessor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Utility.LambdaProvider.GetLambdaByFilter``1(SPC.Core.Models.Filter)">
+            <summary>
+            通过FilterCondition解析得到Lambda表达式
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Utility.LambdaProvider.ChangeType(System.Object,System.Type)">
+            <summary>
+            通用类型转换
+            </summary>
+            <param name="value">需要转换的值</param>
+            <param name="type">目标类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Utility.PaginationExtensions.AsPagination(System.Linq.IQueryable{System.Object},System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            分页
+            </summary>
+            <param name="collection">结果集</param>
+            <param name="pageIndex">查询页的索引</param>
+            <param name="pageSize">查询页的显示结果数量</param>
+            <returns></returns>
+        </member>
+        <member name="P:SPC.Core.Utility.RequestUtil.Timeout">
+            <summary>
+                请求与响应的超时时间
+            </summary>
+        </member>
+        <member name="M:SPC.Core.Utility.RequestUtil.Post(System.String,System.Object)">
+            <summary>
+                执行HTTP POST请求。
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="data">请求参数:</param>
+            <returns>HTTP响应</returns>
+        </member>
+        <member name="M:SPC.Core.Utility.RequestUtil.Get(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+            <summary>
+                执行HTTP GET请求。
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="parameters">请求参数</param>
+            <param name="charset">编码字符集</param>
+            <returns>HTTP响应</returns>
+        </member>
+        <member name="M:SPC.Core.Utility.RequestUtil.GetResponseAsString(System.Net.HttpWebResponse,System.Text.Encoding)">
+            <summary>
+                把响应流转换为文本。
+            </summary>
+            <param name="rsp">响应流对象</param>
+            <param name="encoding">编码方式</param>
+            <returns>响应文本</returns>
+        </member>
+        <member name="M:SPC.Core.Utility.RequestUtil.BuildQuery(System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+            <summary>
+                组装普通文本请求参数。
+            </summary>
+            <param name="parameters">Key-Value形式请求参数字典</param>
+            <param name="charset"></param>
+            <returns>URL编码后的请求数据</returns>
+        </member>
+        <member name="M:SPC.Core.Utility.XMLHelper.WriteKeyValue(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            写入指定的XML文件的键值，文件不存在则自动增加
+            </summary>
+            <param name="fileName">XML文件名</param>
+            <param name="rootElementName">XML根节点名</param>
+            <param name="keyName">键名</param>
+            <param name="keyValue">键值</param>
+        </member>
+        <member name="M:SPC.Core.Utility.XMLHelper.ReadKeyValue(System.String,System.String,System.String,System.String)">
+            <summary>
+            读取指定节点下的键值，文件不存在则自动增加
+            </summary>
+            <param name="fileName">XML文件名</param>
+            <param name="rootElementName">XML根节点名</param>
+            <param name="keyName">键名</param>
+            <returns>指定的键值</returns>
+        </member>
+        <member name="M:SPC.Core.Utility.XMLHelper.ReadValue(System.String,System.String,System.String)">
+            <summary>
+            读取指定节点下的键值，文件不存在则自动增加
+            </summary>
+            <param name="fileName">XML文件名</param>
+            <param name="rootElementName">XML根节点名</param>
+            <param name="keyName">键名</param>
+            <returns>指定的键值</returns>
+        </member>
+        <member name="M:SPC.Core.Utility.XMLHelper.ReadDictionaryType(System.String,System.String,System.String)">
+            <summary>
+            读取根节点下的键值对
+            </summary>
+            <param name="fileName"></param>
+            <param name="rootElementName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Core.Utility.XMLHelper.ReadDictionary(System.String,System.String,System.String)">
+            <summary>
+            读取指定节点下的键值对
+            </summary>
+            <param name="fileName">XML文件名</param>
+            <param name="rootElementName">XML根节点名</param>
+            <returns>根节点下的键值对</returns>
+        </member>
+    </members>
+</doc>

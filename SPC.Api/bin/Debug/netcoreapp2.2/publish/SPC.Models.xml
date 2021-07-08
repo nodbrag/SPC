@@ -1,0 +1,905 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SPC.Models</name>
+    </assembly>
+    <members>
+        <member name="P:SPC.Models.DtoModel.ACLDtos.ACLDto.ACLID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ACLDtos.ACLDto.VisitorType">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ACLDtos.ACLDto.VisitorID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ACLDtos.ACLDto.AccessRight">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ACLDtos.ACLDto.AccessEntryType">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ACLDtos.ACLDto.AccessEntryID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ACLDtos.ACLDto.AccessParams">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.DefectItemDtos.DefectItemDto.DefectItemID">
+            <summary>
+            缺陷项ID
+            </summary>        
+        </member>
+        <member name="P:SPC.Models.DtoModel.DefectItemDtos.DefectItemDto.DefectItemCode">
+            <summary>
+            缺陷项code
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.DefectItemDtos.DefectItemDto.DefectItemName">
+            <summary>
+             缺陷项名
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.DefectItemDtos.DefectItemDto.Memo">
+            <summary>
+             缺陷项备注
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.DefectItemDtos.DefectItemFilterDto.DefectItemKeyword">
+            <summary>
+            缺陷项 coe或name 搜索
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentClassDtos.EquipmentClassDto.EquipmentClassID">
+            <summary>
+            设备类别id
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentClassDtos.EquipmentClassDto.EquipmentClassCode">
+            <summary>
+            设备类别code
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentClassDtos.EquipmentClassDto.EquipmentClassName">
+            <summary>
+            设备分类名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentClassDtos.EquipmentClassDto.ParentID">
+            <summary>
+            父编码id
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentClassDtos.EquipmentClassDto.Memo">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentClassDtos.EquipmentClassFilterDto.EquipmentClassKeyword">
+            <summary>
+            设备分类名称或设备分类code 搜索
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentDto.EquipmentId">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentDto.EquipmentClassId">
+            <summary>
+            设备分类
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentDto.EquipmentClassName">
+            <summary>
+            设备分类名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentDto.EquipmentType">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentDto.EquipmentCode">
+            <summary>
+            设备编码
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentDto.EquipmentName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentDto.EquipmentSpec">
+            <summary>
+            设备描述
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentDto.Manufacturer">
+            <summary>
+            设备厂商  
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentDto.ProductionDate">
+            <summary>
+            投产时间
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentDto.LifeCircleYear">
+            <summary>
+            生命周期
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentDto.StandCapacity">
+            <summary>
+            标准容量
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentDto.Memo">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentFilterDto.EquipmentKeyword">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentFilterDto.EquipmentClassID">
+            <summary>
+            设备分类
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentFilterDto.BeginProductionDate">
+            <summary>
+            设备投产开始时间
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentDtos.EquipmentFilterDto.EndProductionDate">
+            <summary>
+            设备投产结束时间
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentTagDtos.EquipmentTagDto.EquipmentTagID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentTagDtos.EquipmentTagDto.TagID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.EquipmentTagDtos.EquipmentTagDto.EquipmentID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionOrderDetailDtos.InspectionOrderDetailDto.InspectionOrderDetailID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionOrderDetailDtos.InspectionOrderDetailDto.InspectionOrderID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionOrderDetailDtos.InspectionOrderDetailDto.ParameterValue">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionOrderDtos.InspectionOrderDto.InspectionOrderID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionOrderDtos.InspectionOrderDto.TaskID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionOrderDtos.InspectionOrderDto.ProductSN">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionOrderDtos.InspectionOrderDto.OrderDateTime">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionParamDtos.InspectionParamDto.InspectionParamId">
+            <summary>
+            检测参数ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionParamDtos.InspectionParamDto.ProductId">
+            <summary>
+            产品ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionParamDtos.InspectionParamDto.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionParamDtos.InspectionParamDto.WorkProcessId">
+            <summary>
+             工序ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionParamDtos.InspectionParamDto.WorkProcessName">
+            <summary>
+            工序名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionParamDtos.InspectionParamDto.ParameterId">
+            <summary>
+             参数ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionParamDtos.InspectionParamDto.ParameterName">
+            <summary>
+             参数名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionParamDtos.InspectionParamFilterDto.WorkProcessId">
+            <summary>
+            工序ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.InspectionParamDtos.InspectionParamFilterDto.ProductId">
+            <summary>
+            产品ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ParameterDtos.ParameterDto.ParameterID">
+            <summary>
+            参数Id
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ParameterDtos.ParameterDto.ParameterCode">
+            <summary>
+            参数code
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ParameterDtos.ParameterDto.ParameterName">
+            <summary>
+             参数名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ParameterDtos.ParameterDto.ParameterDataType">
+            <summary>
+            参数数据类型
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ParameterDtos.ParameterDto.ParameterValuePrecision">
+            <summary>
+             参数值
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ParameterDtos.ParameterDto.ParameterValueType">
+            <summary>
+             参数值类型
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ParameterDtos.ParameterDto.StandardValue">
+            <summary>
+            标准值
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ParameterDtos.ParameterDto.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ParameterDtos.ParameterDto.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ParameterDtos.ParameterFilterDto.ParameterKeyword">
+            <summary>
+            参数查询过滤 参数编号或名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ProductDtos.ProductDto.ProductID">
+            <summary>
+            产品ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ProductDtos.ProductDto.ProductCode">
+            <summary>
+            产品编号
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ProductDtos.ProductDto.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.ProductDtos.ProductFilterDto.ProductKeyword">
+            <summary>
+            产品code 及产品名搜索
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.RoleDtos.RoleDto.RoleID">
+            <summary>
+            角色编号
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.RoleDtos.RoleDto.RoleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.RoleDtos.RoleDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:SPC.Models.DtoModel.SpcAnalyseDtos.PListDto">
+            <summary>
+            不良率列表数据
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.SpcAnalyseDtos.PListDto.EquipmentName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.SpcAnalyseDtos.PListDto.DefectItemName">
+            <summary>
+            缺陷名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.SpcAnalyseDtos.PListDto.badNum">
+            <summary>
+            不良数
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.SpcAnalyseDtos.PListDto.BadRate">
+            <summary>
+            不良率
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.SpcAnalyseDtos.PListDto.totalNum">
+            <summary>
+            总数
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.SpcAnalyseDtos.SpcAnalyseFilter.BeginDateTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.SpcAnalyseDtos.SpcAnalyseFilter.EndDateTime">
+            <summary>
+            结束数据
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.SpcAnalyseDtos.SpcAnalyseFilter.ProductID">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.SpcAnalyseDtos.SpcAnalyseFilter.EquipmentID">
+            <summary>
+            设备ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.SystemSettingDtos.SystemSettingDto.SystemSettingID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.SystemSettingDtos.SystemSettingDto.SystemSettingKey">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.SystemSettingDtos.SystemSettingDto.SystemSettingValue">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.SystemSettingDtos.SystemSettingDto.Description">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TagItemDtos.TagItemDto.TagID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TagItemDtos.TagItemDto.TagTopic">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TagItemDtos.TagItemDto.TagName">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TagRecordDtos.TagRecordDto.TagID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TagRecordDtos.TagRecordDto.TagValue">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TagRecordDtos.TagRecordDto.RecordDateTime">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDto.TaskId">
+            <summary>
+            任务ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDto.ProductId">
+            <summary>
+             产品ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDto.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDto.WorkProcessId">
+            <summary>
+            工序ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDto.WorkProcessName">
+            <summary>
+            工序名
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDto.EquipmentId">
+            <summary>
+            设备ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDto.EquipmentName">
+            <summary>
+            设备名
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDto.EquipmentCode">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDto.BatchNo">
+            <summary>
+            批次号
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDto.Quantity">
+            <summary>
+            总量
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDto.BeginDateTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDto.EndDateTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskVisionCheckDto.EquipmentId">
+            <summary>
+            设备ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskVisionCheckDto.ProductId">
+            <summary>
+             产品ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskVisionCheckDto.BatchNo">
+            <summary>
+            批次号
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskVisionCheckDto.Quantity">
+            <summary>
+            总量
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskVisionCheckDto.BeginDateTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskVisionCheckDto.EndDateTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskVisionCheckDto.defectDetails">
+            <summary>
+             检测缺陷详情
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.DefectDetail.DefectItemID">
+            <summary>
+             缺陷ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.DefectDetail.EuclidDistance">
+            <summary>
+             距离
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.DefectDetail.PointX">
+            <summary>
+             起点x
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.DefectDetail.PointY">
+            <summary>
+             起点y
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.DefectDetail.Width">
+            <summary>
+             宽度
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.DefectDetail.Height">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <!-- 对于成员“P:SPC.Models.DtoModel.TaskDtos.TaskDimensionDto.ProductID”忽略有格式错误的 XML 注释 -->
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDimensionDto.EquipmentId">
+            <summary>
+            设备ID
+            </summary>
+        </member>
+        <!-- 对于成员“P:SPC.Models.DtoModel.TaskDtos.TaskDimensionDto.BatchNo”忽略有格式错误的 XML 注释 -->
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDiscreteDto.BatchNo">
+            <summary>
+            批次号
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDiscreteDto.ProductID">
+            <summary>
+             产品ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDiscreteDto.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDiscreteDto.InjectionEquipmentName">
+            <summary>
+            注射设备名
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDiscreteDto.SwayEquipmentName">
+            <summary>
+            摆件设备名
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDiscreteDto.PlasticEquipmentName">
+            <summary>
+            整形设备名
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDiscreteDto.FiringEquipmentName">
+            <summary>
+            烧结设备名
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDiscreteDto.STime">
+            <summary>
+            注射开始时间
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDiscreteDto.CavityName">
+            <summary>
+            模穴位
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDiscreteDto.MatrixName">
+            <summary>
+            模具号
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDiscreteFilterDto.EndDateTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDiscreteFilterDto.BeginDateTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskDiscreteFilterDto.BatchNo">
+            <summary>
+            批次号
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskFilterDto.WorkProcessName">
+            <summary>
+            工序
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskFilterDto.BeginDateTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskFilterDto.EndDateTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskFilterDto.BatchNo">
+            <summary>
+            批次号
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskFilterDto.EquipmentId">
+            <summary>
+            设备ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.TaskDtos.TaskFilterDto.ProductId">
+            <summary>
+             产品ID
+            </summary>
+        </member>
+        <member name="T:SPC.Models.DtoModel.UserDtos.UserDto">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserDtos.UserDto.UserID">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserDtos.UserDto.UserCode">
+            <summary>
+            用户登录名
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserDtos.UserDto.UserName">
+            <summary>
+            用户真实姓名
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserDtos.UserDto.Telephone">
+            <summary>
+            用户座机电话
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserDtos.UserDto.MobilePhone">
+            <summary>
+            移动电话
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserDtos.UserDto.EMail">
+            <summary>
+            电子邮件
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserDtos.UserDto.IsUsed">
+            <summary>
+            是否使用
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserDtos.UserDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserDtos.UserDto.RoleID">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="T:SPC.Models.DtoModel.UserDtos.UserTokenRequest">
+            <summary>
+            用户授权信息
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserDtos.UserTokenRequest.UserCode">
+            <summary>
+            账户名
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserDtos.UserTokenRequest.Password">
+            <summary>
+            用户密码
+            </summary>
+        </member>
+        <member name="T:SPC.Models.DtoModel.UserDtos.UserFilterDto">
+            <summary>
+            用户过滤条件
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserDtos.UserFilterDto.Keyword">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserRoleDtos.UserRoleDto.UserRoleID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserRoleDtos.UserRoleDto.UserID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.UserRoleDtos.UserRoleDto.RoleID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.VInspectionOrderDetailDtos.VInspectionOrderDetailDto.VInspectionOrderDetailID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.VInspectionOrderDetailDtos.VInspectionOrderDetailDto.VInspectionOrderID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.VInspectionOrderDetailDtos.VInspectionOrderDetailDto.DefectItemID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.VInspectionOrderDetailDtos.VInspectionOrderDetailDto.EuclidDistance">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.VInspectionOrderDetailDtos.VInspectionOrderDetailDto.PointX">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.VInspectionOrderDetailDtos.VInspectionOrderDetailDto.PointY">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.VInspectionOrderDetailDtos.VInspectionOrderDetailDto.Width">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.VInspectionOrderDetailDtos.VInspectionOrderDetailDto.Height">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.VInspectionOrderDtos.VInspectionOrderDto.VInspectionOrderID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.VInspectionOrderDtos.VInspectionOrderDto.TaskID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.VInspectionOrderDtos.VInspectionOrderDto.ProductSN">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.VInspectionOrderDtos.VInspectionOrderDto.OrderDateTime">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.WorkProcessDefectDtos.WorkProcessDefectDto.WorkProcessDefectID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.WorkProcessDefectDtos.WorkProcessDefectDto.DefectItemID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.WorkProcessDefectDtos.WorkProcessDefectDto.WorkProcessID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.WorkProcessDtos.WorkProcessDto.WorkProcessID">
+            <summary>
+            工序id
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.WorkProcessDtos.WorkProcessDto.WorkProcessCode">
+            <summary>
+             工序code
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.WorkProcessDtos.WorkProcessDto.WorkProcessName">
+            <summary>
+             工序名称
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.WorkProcessDtos.WorkProcessDto.Memo">
+            <summary>
+             工序描述
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.WorkProcessDtos.WorkProcessDto.DefectItemID">
+            <summary>
+            缺陷ID
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.WorkProcessDtos.WorkProcessDto.DefectItemNames">
+            <summary>
+            缺陷名称，分开
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.WorkProcessDtos.WorkProcessFilterDto.WorkProcessKeyword">
+            <summary>
+            工序code或Name 搜索
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.WorkProcessEquipmentDtos.WorkProcessEquipmentDto.WorkProcessEquipmentID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.WorkProcessEquipmentDtos.WorkProcessEquipmentDto.WorkProcessID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:SPC.Models.DtoModel.WorkProcessEquipmentDtos.WorkProcessEquipmentDto.EquipmentID">
+            <summary>
+             
+            </summary>
+        </member>
+    </members>
+</doc>

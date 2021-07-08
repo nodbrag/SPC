@@ -1,0 +1,15 @@
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\bin\Debug\netcoreapp2.2\SPC.CodeGen.deps.json
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\bin\Debug\netcoreapp2.2\SPC.CodeGen.runtimeconfig.json
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\bin\Debug\netcoreapp2.2\SPC.CodeGen.runtimeconfig.dev.json
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\bin\Debug\netcoreapp2.2\SPC.CodeGen.dll
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\bin\Debug\netcoreapp2.2\SPC.CodeGen.pdb
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\bin\Debug\netcoreapp2.2\SPC.Core.dll
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\bin\Debug\netcoreapp2.2\SPC.Core.pdb
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\obj\Debug\netcoreapp2.2\SPC.CodeGen.csprojAssemblyReference.cache
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\obj\Debug\netcoreapp2.2\SPC.CodeGen.csproj.CoreCompileInputs.cache
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\obj\Debug\netcoreapp2.2\SPC.CodeGen.AssemblyInfoInputs.cache
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\obj\Debug\netcoreapp2.2\SPC.CodeGen.AssemblyInfo.cs
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\obj\Debug\netcoreapp2.2\SPC.CodeGen.csproj.CopyComplete
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\obj\Debug\netcoreapp2.2\SPC.CodeGen.dll
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\obj\Debug\netcoreapp2.2\SPC.CodeGen.pdb
+F:\workspace\project\SPC\SPC2019\SPC.CodeGen\bin\Debug\netcoreapp2.2\SPC.Core.xml

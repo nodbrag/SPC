@@ -1,0 +1,14 @@
+F:\workspace\project\SPC\SPC2019\SPC.IService\bin\Release\netcoreapp2.2\SPC.IService.deps.json
+F:\workspace\project\SPC\SPC2019\SPC.IService\bin\Release\netcoreapp2.2\SPC.IService.dll
+F:\workspace\project\SPC\SPC2019\SPC.IService\bin\Release\netcoreapp2.2\SPC.IService.pdb
+F:\workspace\project\SPC\SPC2019\SPC.IService\bin\Release\netcoreapp2.2\SPC.Core.dll
+F:\workspace\project\SPC\SPC2019\SPC.IService\bin\Release\netcoreapp2.2\SPC.Models.dll
+F:\workspace\project\SPC\SPC2019\SPC.IService\bin\Release\netcoreapp2.2\SPC.Core.pdb
+F:\workspace\project\SPC\SPC2019\SPC.IService\bin\Release\netcoreapp2.2\SPC.Models.pdb
+F:\workspace\project\SPC\SPC2019\SPC.IService\obj\Release\netcoreapp2.2\SPC.IService.csprojAssemblyReference.cache
+F:\workspace\project\SPC\SPC2019\SPC.IService\obj\Release\netcoreapp2.2\SPC.IService.csproj.CoreCompileInputs.cache
+F:\workspace\project\SPC\SPC2019\SPC.IService\obj\Release\netcoreapp2.2\SPC.IService.AssemblyInfoInputs.cache
+F:\workspace\project\SPC\SPC2019\SPC.IService\obj\Release\netcoreapp2.2\SPC.IService.AssemblyInfo.cs
+F:\workspace\project\SPC\SPC2019\SPC.IService\obj\Release\netcoreapp2.2\SPC.IService.csproj.CopyComplete
+F:\workspace\project\SPC\SPC2019\SPC.IService\obj\Release\netcoreapp2.2\SPC.IService.dll
+F:\workspace\project\SPC\SPC2019\SPC.IService\obj\Release\netcoreapp2.2\SPC.IService.pdb

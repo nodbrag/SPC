@@ -1,0 +1,58 @@
+﻿/**
+*┌──────────────────────────────────────────────────────────────┐
+*│　描    述：{Comment}                                                    
+*│　作    者：{Author}                                              
+*│　版    本：1.0   模板代码自动生成                                              
+*│　创建时间：{GeneratorTime}                           
+*└──────────────────────────────────────────────────────────────┘
+*┌──────────────────────────────────────────────────────────────┐
+*│　命名空间： {IServicesNamespace}                                   
+*│　接口名称： I{ModelName}Service                                      
+*└──────────────────────────────────────────────────────────────┘
+*/
+using System;
+using System.Collections.Generic;
+using System.Text;
+using SPC.Models.DtoModel;
+using SPC.Core.Dtos;
+
+namespace SPC.IService
+{
+    public interface I{ModelName}Service
+    {
+        /// <summary>
+        /// 创建{ModelName}
+        /// </summary>
+        /// <param name="model"></param>
+        void Create{ModelName}({ModelName}Dtos.{ModelName}Dto model);
+        /// <summary>
+        /// 修改{ModelName}
+        /// </summary>
+        /// <param name="model"></param>
+        void Update{ModelName}({ModelName}Dtos.{ModelName}Dto model);
+        /// <summary>
+        /// 删除{ModelName}根据ID
+        /// </summary>
+        /// <param name="id"></param>
+        void Delete{ModelName}(int id);
+        /// <summary>
+        /// 通过编号获取{ModelName}信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        {ModelName}Dtos.{ModelName}Dto Get{ModelName}ByID(int id);
+        /// <summary>
+        /// 获取所有{ModelName} 列表信息
+        /// </summary>
+        /// <returns></returns>
+        List<{ModelName}Dtos.{ModelName}Dto> Get{ModelName}List();
+        /// <summary>
+        /// 通过过滤条件获取{ModelName}分页数据
+        /// </summary>
+        /// <param name="fiterCondition"></param>
+        /// <returns></returns>
+        Tuple<List<{ModelName}Dtos.{ModelName}Dto>, int> Get{ModelName}ListForPagination(FiterConditionBase<{ModelName}Dtos.{ModelName}FilterDto> fiterCondition);
+
+    }
+}
+

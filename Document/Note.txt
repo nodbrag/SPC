@@ -1,0 +1,26 @@
+1、NavigationItemType:WebPage/Winform/Mobile;Params:存储菜单运行时参数，针对WebPage表示为显示图标。
+
+2、单据字段引用，存在外键引用的，不能为null。不存在外键引用的，不引用默认为0。
+
+4、OperationContent nvarchar 500改为 ntext。
+
+5、Liscense中需要包含CustomerId、SetId。
+
+6、SnowFlake沿用DataCenter、Machine的编码格式，需要在服务器端、包装线独立运行的HMI端配置appsettings.json。
+
+7、配方替代料，只考虑多个替换一个的情况，替代量根据比例计算得出。
+
+8、Api请求异常信息保存到OperationLog中。
+
+9、新增DocumentNo数据表，其中包含业务名称、编码规则、流水号、步长、周期等字段。
+
+10、增删改，耗时较长的列表查询，使用Context.Database.BeginTransaction()开启事务进行管理。
+
+11、业务频繁插入、修改数据，采用SQL语句进行表锁定，避免大量数据操作导致死锁，需要查询的数据，应尽早获取并缓存。
+
+12、对于单表查询，可以不使用事务进行控制隔离。复杂的列表查询必须要进行事务隔离控制IsolationLevel.ReadUncommitted。
+
+13、部分报表，查询关联较多，耗时较长的可以使用SQL语句进行，每张表均需要进行With(NoLock)标识。
+
+14、Generate Model & Context from Database
+Scaffold-DbContext "Data Source=www.xisgroup.com,1433;Initial Catalog=TPX6;Persist Security Info=True;User ID=tpx;Password=tpx;MultipleActiveResultSets=true;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -ContextDir Models -Context TPXContext -UseDatabaseNames -Force

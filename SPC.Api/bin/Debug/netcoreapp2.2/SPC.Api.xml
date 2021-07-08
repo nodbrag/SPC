@@ -1,0 +1,777 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SPC.Api</name>
+    </assembly>
+    <members>
+        <member name="T:SPC.Api.Controllers.CommonDictionryController">
+            <summary>
+            公共字典接口
+            </summary>
+        </member>
+        <member name="M:SPC.Api.Controllers.CommonDictionryController.GetCommonDictionryList">
+            <summary>
+            获取公共字典数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Api.Controllers.DefectItemController">
+            <summary>
+            缺陷项管理接口
+            </summary>
+        </member>
+        <member name="M:SPC.Api.Controllers.DefectItemController.CreateDefectItem(SPC.Models.DtoModel.DefectItemDtos.DefectItemDto)">
+            <summary>
+                创建缺陷项
+            </summary>
+            <param name="model">缺陷项信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.DefectItemController.UpdateDefectItem(SPC.Models.DtoModel.DefectItemDtos.DefectItemDto)">
+            <summary>
+                修改缺陷项
+            </summary>
+            <param name="model">缺陷信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.DefectItemController.DeleteDefectItem(System.Int32)">
+            <summary>
+            删除缺陷项
+            </summary>
+            <param name="id">缺陷项ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.DefectItemController.GetDefectItemByID(System.Int32)">
+            <summary>
+            通过编号获取缺陷项信息
+            </summary>
+            <param name="id">缺陷项ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.DefectItemController.GetDefectItemList">
+            <summary>
+            获取所有缺陷项列表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.DefectItemController.GetDefectItemListForPagination(SPC.Core.Dtos.FiterConditionBase{SPC.Models.DtoModel.DefectItemDtos.DefectItemFilterDto})">
+            <summary>
+            通过过滤条件获取缺陷项分页数据
+            </summary>
+            <param name="fiterCondition">过滤条件</param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Api.Controllers.EquipmentClassController">
+            <summary>
+            设备分类管理接口
+            </summary>
+        </member>
+        <member name="M:SPC.Api.Controllers.EquipmentClassController.CreateEquipmentClass(SPC.Models.DtoModel.EquipmentClassDtos.EquipmentClassDto)">
+            <summary>
+                创建设备分类
+            </summary>
+            <param name="model">设备分类信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.EquipmentClassController.UpdateEquipmentClass(SPC.Models.DtoModel.EquipmentClassDtos.EquipmentClassDto)">
+            <summary>
+                修改设备分类
+            </summary>
+            <param name="model">设备分类信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.EquipmentClassController.DeleteEquipmentClass(System.Int32)">
+            <summary>
+            删除设备分类
+            </summary>
+            <param name="id">设备分类ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.EquipmentClassController.GetEquipmentClassByID(System.Int32)">
+            <summary>
+            通过编号获取设备分类信息
+            </summary>
+            <param name="id">设备分类ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.EquipmentClassController.GetEquipmentClassList">
+            <summary>
+            获取所有设备分类列表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.EquipmentClassController.GetEquipmentClassListForPagination(SPC.Core.Dtos.FiterConditionBase{SPC.Models.DtoModel.EquipmentClassDtos.EquipmentClassFilterDto})">
+            <summary>
+            通过过滤条件获取设备分类分页数据
+            </summary>
+            <param name="fiterCondition">过滤条件</param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Api.Controllers.EquipmentController">
+            <summary>
+            设备管理接口
+            </summary>
+        </member>
+        <member name="M:SPC.Api.Controllers.EquipmentController.CreateEquipment(SPC.Models.DtoModel.EquipmentDtos.EquipmentDto)">
+            <summary>
+                创建设备
+            </summary>
+            <param name="model">设备信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.EquipmentController.UpdateEquipment(SPC.Models.DtoModel.EquipmentDtos.EquipmentDto)">
+            <summary>
+                修改设备
+            </summary>
+            <param name="model">设备信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.EquipmentController.DeleteEquipment(System.Int32)">
+            <summary>
+            删除设备
+            </summary>
+            <param name="id">设备ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.EquipmentController.GetEquipmentByID(System.Int32)">
+            <summary>
+            通过编号获取设备信息
+            </summary>
+            <param name="id">设备ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.EquipmentController.GetEquipmentList">
+            <summary>
+            获取所有设备列表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.EquipmentController.GetEquipmentListForPagination(SPC.Core.Dtos.FiterConditionBase{SPC.Models.DtoModel.EquipmentDtos.EquipmentFilterDto})">
+            <summary>
+            通过过滤条件获取设备分页数据
+            </summary>
+            <param name="fiterCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Api.Controllers.InspectionParamController">
+            <summary>
+            产品检测参数管理接口
+            </summary>
+        </member>
+        <member name="M:SPC.Api.Controllers.InspectionParamController.CreateInspectionParam(SPC.Models.DtoModel.InspectionParamDtos.InspectionParamDto)">
+            <summary>
+                创建产品检测参数
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.InspectionParamController.UpdateInspectionParam(SPC.Models.DtoModel.InspectionParamDtos.InspectionParamDto)">
+            <summary>
+                修改产品检测参数
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.InspectionParamController.DeleteInspectionParam(System.Int32)">
+            <summary>
+            删除产品检测参数
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.InspectionParamController.GetInspectionParamByID(System.Int32)">
+            <summary>
+            通过编号获取产品检测参数信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.InspectionParamController.GetInspectionParamList">
+            <summary>
+            获取所有产品检测参数列表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.InspectionParamController.GetInspectionParamListForPagination(SPC.Core.Dtos.FiterConditionBase{SPC.Models.DtoModel.InspectionParamDtos.InspectionParamFilterDto})">
+            <summary>
+            通过过滤条件获取产品检测参数分页数据
+            </summary>
+            <param name="fiterCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Api.Controllers.ParameterController">
+            <summary>
+            参数管理接口
+            </summary>
+        </member>
+        <member name="M:SPC.Api.Controllers.ParameterController.CreateParameter(SPC.Models.DtoModel.ParameterDtos.ParameterDto)">
+            <summary>
+                创建参数
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.ParameterController.UpdateParameter(SPC.Models.DtoModel.ParameterDtos.ParameterDto)">
+            <summary>
+                修改参数
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.ParameterController.DeleteParameter(System.Int32)">
+            <summary>
+            删除参数
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.ParameterController.GetParameterByID(System.Int32)">
+            <summary>
+            通过编号获取参数信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.ParameterController.GetParameterList">
+            <summary>
+            获取所有参数列表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.ParameterController.GetParameterListForPagination(SPC.Core.Dtos.FiterConditionBase{SPC.Models.DtoModel.ParameterDtos.ParameterFilterDto})">
+            <summary>
+            通过过滤条件获取参数分页数据
+            </summary>
+            <param name="fiterCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Api.Controllers.ProductController">
+            <summary>
+            产品管理接口
+            </summary>
+        </member>
+        <member name="M:SPC.Api.Controllers.ProductController.CreateProduct(SPC.Models.DtoModel.ProductDtos.ProductDto)">
+            <summary>
+                创建产品
+            </summary>
+            <param name="model">产品信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.ProductController.UpdateProduct(SPC.Models.DtoModel.ProductDtos.ProductDto)">
+            <summary>
+                修改产品
+            </summary>
+            <param name="model">产品信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.ProductController.DeleteProduct(System.Int32)">
+            <summary>
+            删除产品
+            </summary>
+            <param name="id">产品ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.ProductController.GetProductByID(System.Int32)">
+            <summary>
+            通过编号获取产品信息
+            </summary>
+            <param name="id">产品ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.ProductController.GetProductList">
+            <summary>
+            获取所有产品列表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.ProductController.GetProductListForPagination(SPC.Core.Dtos.FiterConditionBase{SPC.Models.DtoModel.ProductDtos.ProductFilterDto})">
+            <summary>
+            通过过滤条件获取产品分页数据
+            </summary>
+            <param name="fiterCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Api.Controllers.RoleController">
+            <summary>
+            角色管理接口
+            </summary>
+        </member>
+        <member name="M:SPC.Api.Controllers.RoleController.CreateRole(SPC.Models.DtoModel.RoleDtos.RoleDto)">
+            <summary>
+                创建角色
+            </summary>
+            <param name="model">新增角色信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.RoleController.UpdateRole(SPC.Models.DtoModel.RoleDtos.RoleDto)">
+            <summary>
+                修改角色
+            </summary>
+            <param name="model">编辑角色信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.RoleController.DeleteRole(System.Int32)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="id">角色ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.RoleController.GetRoleByID(System.Int32)">
+            <summary>
+            通过编号获取角色信息
+            </summary>
+            <param name="id">角色ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.RoleController.GetRoleList">
+            <summary>
+            获取所有角色列表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.RoleController.GetRoleListForPagination(SPC.Core.Dtos.FiterConditionBase{SPC.Models.DtoModel.RoleDtos.RoleFilterDto})">
+            <summary>
+            通过过滤条件获取角色分页数据
+            </summary>
+            <param name="fiterCondition">搜索过滤条件</param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Api.Controllers.SpcAnalyseController">
+            <summary>
+            Spc 分析接口
+            </summary>
+        </member>
+        <member name="M:SPC.Api.Controllers.SpcAnalyseController.GetBadControlData(SPC.Models.DtoModel.SpcAnalyseDtos.SpcAnalyseFilter)">
+            <summary>
+                获取不良品控制分析数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.SpcAnalyseController.GetFourPData(SPC.Models.DtoModel.SpcAnalyseDtos.SpcAnalyseFilter)">
+            <summary>
+            获取柏拉图+列表+不良品控制图+合格率图
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.SpcAnalyseController.GetTowPData(SPC.Models.DtoModel.SpcAnalyseDtos.SpcAnalyseFilter)">
+            <summary>
+            获取柏拉图+列表
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.SpcAnalyseController.GetPlistData(SPC.Models.DtoModel.SpcAnalyseDtos.SpcAnalyseFilter)">
+            <summary>
+            获取不良数据列表
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.SpcAnalyseController.GetPlistDataByBatchNo(System.String)">
+            <summary>
+            获取不良数据列表 
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.SpcAnalyseController.GetPlatoChartData(SPC.Models.DtoModel.SpcAnalyseDtos.SpcAnalyseFilter)">
+            <summary>
+            获取不拉图报表数据
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.SpcAnalyseController.GetCPKData">
+            <summary>
+            获取Cpk数据分析
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.SpcAnalyseController.GetRunningChartData">
+            <summary>
+            获取运行图数据案例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.SpcAnalyseController.GetQualityControlData">
+            <summary>
+            获取质量控制数据案例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.SpcAnalyseController.GetHistogramData(System.String)">
+            <summary>
+            获取Cpk 和直方图数据分析
+            </summary>
+            <param name="BatchNo">批次号</param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Api.Controllers.SystemSettingController">
+            <summary>
+                系统设置接口
+            </summary>
+        </member>
+        <member name="M:SPC.Api.Controllers.SystemSettingController.Create(SPC.Models.DtoModel.SystemSettingDtos.SystemSettingDto)">
+            <summary>
+                创建系统设置
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.SystemSettingController.Update(SPC.Models.DtoModel.SystemSettingDtos.SystemSettingDto)">
+            <summary>
+                修改系统设置
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.SystemSettingController.Delete(System.Int32)">
+            <summary>
+                修改系统设置
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.SystemSettingController.GetById(System.Int32)">
+            <summary>
+                根据ID获取系统设置
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.SystemSettingController.GetListForPagination(SPC.Core.Models.PaginationFilter)">
+            <summary>
+                获取系统设置列表--分页
+            </summary>
+            <param name="paginationFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.SystemSettingController.GetList(SPC.Core.Models.SortFilter)">
+            <summary>
+                获取系统设置列表
+            </summary>
+            <param name="paginationFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Api.Controllers.TaskController">
+            <summary>
+            任务管理接口
+            </summary>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.CreateTask(SPC.Models.DtoModel.TaskDtos.TaskDto)">
+            <summary>
+                创建单任务
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.CreateTasks(System.Collections.Generic.List{SPC.Models.DtoModel.TaskDtos.TaskDto})">
+            <summary>
+                创建多任务
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.uploadExcel(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            上传excel文件
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.ImportDimensionData(SPC.Models.DtoModel.TaskDtos.TaskDimensionDto)">
+            <summary>
+            导入离散数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.ImportVisionCheckData(System.String)">
+            <summary>
+            导入视觉检测数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.ImportVisionCheckData2(SPC.Models.DtoModel.TaskDtos.TaskVisionCheckDto)">
+            <summary>
+            导入视觉检测数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.UpdateTask(SPC.Models.DtoModel.TaskDtos.TaskDto)">
+            <summary>
+                修改任务
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.getTaskByBatch(System.String)">
+            <summary>
+            根据批次号获取离散数据
+            </summary>
+            <param name="batchNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.deleteTaskByBatch(System.String)">
+            <summary>
+            根据批次删除离散数据
+            </summary>
+            <param name="batchNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.DeleteTask(System.Int32)">
+            <summary>
+            删除任务
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.GetTaskByID(System.Int32)">
+            <summary>
+            通过编号获取任务信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.GetDimensionDetailList(SPC.Core.Dtos.FiterConditionBase{SPC.Models.DtoModel.TaskDtos.TaskDimensionDetailFilterDto})">
+            <summary>
+            获取尺寸详情数据
+            </summary>
+            <param name="fiterCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.GetDiscreteList(SPC.Core.Dtos.FiterConditionBase{SPC.Models.DtoModel.TaskDtos.TaskDiscreteFilterDto})">
+            <summary>
+            获取离散数据接口
+            </summary>
+            <param name="fiterCondition">过滤条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.GetTaskList">
+            <summary>
+            获取所有任务列表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.TaskController.GetTaskListForPagination(SPC.Core.Dtos.FiterConditionBase{SPC.Models.DtoModel.TaskDtos.TaskFilterDto})">
+            <summary>
+            通过过滤条件获取任务分页数据
+            </summary>
+            <param name="fiterCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Api.Controllers.UserController">
+            <summary>
+            用户管理接口
+            </summary>
+        </member>
+        <member name="M:SPC.Api.Controllers.UserController.UserToken(SPC.Models.DtoModel.UserDtos.UserTokenRequest)">
+            <summary>
+            登录获取token
+            </summary>
+            <param name="authUser">用户授权信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.UserController.CreateUser(SPC.Models.DtoModel.UserDtos.UserDto)">
+            <summary>
+                创建用户
+            </summary>
+            <param name="model">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.UserController.UpdateUser(SPC.Models.DtoModel.UserDtos.UserDto)">
+            <summary>
+            修改用户
+            </summary>
+            <param name="userDto">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.UserController.DeleteUser(System.Int32)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="id">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.UserController.GetUserByID(System.Int32)">
+            <summary>
+            通过编号获取用户信息
+            </summary>
+            <param name="id">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.UserController.GetUserList">
+            <summary>
+            获取所有用户列表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.UserController.GetUserListForPagination(SPC.Core.Dtos.FiterConditionBase{SPC.Models.DtoModel.UserDtos.UserFilterDto})">
+            <summary>
+            通过过滤条件获取用户分页数据
+            </summary>
+            <param name="fiterCondition">过滤条件</param>
+            <returns></returns>
+        </member>
+        <member name="T:SPC.Api.Controllers.WorkProcessController">
+            <summary>
+            工序管理接口
+            </summary>
+        </member>
+        <member name="M:SPC.Api.Controllers.WorkProcessController.CreateWorkProcess(SPC.Models.DtoModel.WorkProcessDtos.WorkProcessDto)">
+            <summary>
+                创建工序
+            </summary>
+            <param name="model">工序信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.WorkProcessController.UpdateWorkProcess(SPC.Models.DtoModel.WorkProcessDtos.WorkProcessDto)">
+            <summary>
+                修改工序
+            </summary>
+            <param name="model">工序信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.WorkProcessController.DeleteWorkProcess(System.Int32)">
+            <summary>
+            删除工序
+            </summary>
+            <param name="id">工序ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.WorkProcessController.GetWorkProcessByID(System.Int32)">
+            <summary>
+            通过编号获取工序信息
+            </summary>
+            <param name="id">工序ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.WorkProcessController.GetWorkProcessList">
+            <summary>
+            获取所有工序列表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SPC.Api.Controllers.WorkProcessController.GetWorkProcessListForPagination(SPC.Core.Dtos.FiterConditionBase{SPC.Models.DtoModel.WorkProcessDtos.WorkProcessFilterDto})">
+            <summary>
+            通过过滤条件获取工序分页数据
+            </summary>
+            <param name="fiterCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="F:SPC.Api.CoreBuilder.CorsPolicyType.AllRequests">
+            <summary>
+            允许所有请求
+            </summary>
+        </member>
+        <member name="F:SPC.Api.CoreBuilder.CorsPolicyType.LimitRequests">
+            <summary>
+            策略限制。
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreConfigurationBuilder.UseRazorEngine">
+            <summary>
+            MVC模板引擎配置
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreConfigurationBuilder.UseErrorHanle">
+            <summary>
+            全局错误拦截器配置
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreConfigurationBuilder.UseSwagger">
+            <summary>
+            Swagger配置
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreConfigurationBuilder.UseMiniProfiler">
+            <summary>
+            MiniProfiler 配置
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreConfigurationBuilder.UseAuth">
+            <summary>
+            认证配置
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreConfigurationBuilder.UseCors(SPC.Api.CoreBuilder.CorsPolicyType)">
+            <summary>
+            跨域配置
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreConfigurationBuilder.UseOther">
+            <summary>
+            其他配置
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreConfigurationBuilder.UseOPCManager">
+            <summary>
+            启动OPC Server
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreServiceBuilder.AddDbcontext">
+            <summary>
+            添加EF数据库上下文
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreServiceBuilder.AddMvcExtensions">
+            <summary>
+            添加Mvc
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreServiceBuilder.AddCache">
+            <summary>
+            添加缓存
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreServiceBuilder.AddLog">
+            <summary>
+            添加日志
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreServiceBuilder.AddAutoMapper">
+            <summary>
+            添加AutoMapper自动对象映射组件
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreServiceBuilder.AddCors">
+            <summary>
+            添加Cors跨域
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreServiceBuilder.AddSwaggerGenerator">
+            <summary>
+            添加Swagger生成器
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreServiceBuilder.AddMiniProfiler">
+            <summary>
+            新增miniProfiler性能监测
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreServiceBuilder.AddJwtAuth">
+            <summary>
+            添加Jwt授权
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreServiceBuilder.AddHttpContext">
+            <summary>
+            添加自定义Http上下文
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreServiceBuilder.AddAppService">
+            <summary>
+            新增应用服务
+            </summary>
+        </member>
+        <member name="M:SPC.Api.CoreBuilder.ICoreServiceBuilder.AddFluentValidationService">
+            <summary>
+            新增数据有效性验证
+            </summary>
+        </member>
+    </members>
+</doc>

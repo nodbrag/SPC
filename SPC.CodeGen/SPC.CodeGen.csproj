@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Templates\ControllerTemplate.txt" />
+    <None Remove="Templates\DtosTemplate.txt" />
+    <None Remove="Templates\IRepositoryTemplate.txt" />
+    <None Remove="Templates\IServicesTemplate.txt" />
+    <None Remove="Templates\ModelTemplate.txt" />
+    <None Remove="Templates\RepositoryTemplate.txt" />
+    <None Remove="Templates\ServiceTemplate.txt" />
+    <None Remove="TPX.CodeGen.csproj.vspscc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\ControllerTemplate.txt" />
+    <EmbeddedResource Include="Templates\DtosTemplate.txt" />
+    <EmbeddedResource Include="Templates\IRepositoryTemplate.txt" />
+    <EmbeddedResource Include="Templates\IServicesTemplate.txt" />
+    <EmbeddedResource Include="Templates\ModelTemplate.txt" />
+    <EmbeddedResource Include="Templates\RepositoryTemplate.txt" />
+    <EmbeddedResource Include="Templates\ServiceTemplate.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SPC.Core\SPC.Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,11 @@
+F:\workspace\project\SPC\SPC2019\SPC.Core\bin\Release\netcoreapp2.2\SPC.Core.deps.json
+F:\workspace\project\SPC\SPC2019\SPC.Core\bin\Release\netcoreapp2.2\SPC.Core.runtimeconfig.json
+F:\workspace\project\SPC\SPC2019\SPC.Core\bin\Release\netcoreapp2.2\SPC.Core.runtimeconfig.dev.json
+F:\workspace\project\SPC\SPC2019\SPC.Core\bin\Release\netcoreapp2.2\SPC.Core.dll
+F:\workspace\project\SPC\SPC2019\SPC.Core\bin\Release\netcoreapp2.2\SPC.Core.pdb
+F:\workspace\project\SPC\SPC2019\SPC.Core\obj\Release\netcoreapp2.2\SPC.Core.csprojAssemblyReference.cache
+F:\workspace\project\SPC\SPC2019\SPC.Core\obj\Release\netcoreapp2.2\SPC.Core.csproj.CoreCompileInputs.cache
+F:\workspace\project\SPC\SPC2019\SPC.Core\obj\Release\netcoreapp2.2\SPC.Core.AssemblyInfoInputs.cache
+F:\workspace\project\SPC\SPC2019\SPC.Core\obj\Release\netcoreapp2.2\SPC.Core.AssemblyInfo.cs
+F:\workspace\project\SPC\SPC2019\SPC.Core\obj\Release\netcoreapp2.2\SPC.Core.dll
+F:\workspace\project\SPC\SPC2019\SPC.Core\obj\Release\netcoreapp2.2\SPC.Core.pdb
